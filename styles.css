@@ -1,7 +1,7 @@
-@font-face {
-	font-family: ;
-	src: url();
-}
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Vast+Shadow);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display+SC);
+
 
 body {
  	
@@ -14,12 +14,13 @@ body {
  }
 
  .nav {
- 	font-family: ;
+ 	font-family: 'Oswald';
  	width: 70%;
  	margin: 0 auto;
  }
 
  #imageHead {
+ 	font-family: 'Vast Shadow';
  	width:100%;
  	background-image: url(img/table-splash.jpeg);
  	background-size: cover;
