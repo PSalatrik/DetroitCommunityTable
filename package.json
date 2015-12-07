@@ -1,0 +1,24 @@
+{
+  "name": "detroitcommunitytable",
+  "version": "0.0.1",
+  "description": "food app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PSalatrik/DetroitCommunityTable.git"
+  },
+  "keywords": [
+    "detroit",
+    "community",
+    "table"
+  ],
+  "author": "I'm not an object, I'm an object literal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PSalatrik/DetroitCommunityTable/issues"
+  },
+  "homepage": "https://github.com/PSalatrik/DetroitCommunityTable#readme"
+}
