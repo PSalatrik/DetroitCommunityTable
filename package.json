@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/PSalatrik/DetroitCommunityTable/issues"
   },
-  "homepage": "https://github.com/PSalatrik/DetroitCommunityTable#readme"
+  "homepage": "https://github.com/PSalatrik/DetroitCommunityTable#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.1.4"
+  }
 }
