@@ -1,0 +1,33 @@
+@font-face {
+	font-family: ;
+	src: url();
+}
+
+body {
+ 	
+}
+
+ .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+    margin-bottom: 0;
+ }
+
+ .nav {
+ 	font-family: ;
+ 	width: 70%;
+ 	margin: 0 auto;
+ }
+
+ #imageHead {
+ 	width:100%;
+ 	background-image: url(img/table-splash.jpeg);
+ 	background-size: cover;
+ 	color: white;
+ 	padding: 250px 0 200px;
+}
+
+#imageHead img {
+	width:100%;
+}
+
