@@ -6,7 +6,11 @@ app.service('yelpService', function($http){
 
     $http({
       method: 'GET',
-      url: 
+      url: yelp.com
+      Consumer Key  NuLE3hAVaJWmVMyRMnTM-A
+      Consumer Secret adjPf1c0JJy2LWeAsqEz7QrL_sQ
+      Token WzPzrA7tcIEv-YuRR1_ilXdyylqOdvVH
+      Token Secret  8gyS5zdHd4uaVCPiEoxZu_PjOU4
     }).then(function workingCallback(response){
       displayFoodStuff.data = response.data."whatever.whatever";
     }, function errorCallBack(response){
@@ -23,32 +27,4 @@ app.service('yelpService', function($http){
 
 
 
-Consumer Key    -7o_68Qv15NZhIaI98Y1TQ
-Consumer Secret    FAM-q3MTJJWYJSRXhDAZipKrg2U
-Token    xuEX_iMf9AfC4YGgjZWUPeL_dzu7a46b
-Token Secret    SeFubxhkw4O0OkLjA9TPbJW1UBE
 
-
-
-/*var app = angular.module("myMod");
-
-app.service('redditService', function ($http) {
-
-	var displayPhotos = {};
-
-	$http({
-  		method: 'GET',
-			url: 'https://www.reddit.com/r/funny/.json' //returns a promis
-	}).then(function successCallback(response) {    //then takes two functions as para
-		displayPhotos.data = response.data.data.children; // 
-  }, function errorCallback(response) {
-  	console.log("Couldn't get data from reddit.");
-  });
-
-  	return {
-  		getContent: function() {
-  			return displayPhotos.data;
-  		}
-  	}
-});
-*/
