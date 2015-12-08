@@ -27,4 +27,3 @@ app.service('yelpService', function($http){
 
 
 
-
