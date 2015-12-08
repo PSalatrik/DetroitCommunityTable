@@ -13,6 +13,7 @@ app.controller('listController', function restaurantList($scope) {
      newRestaurantAdd.rest = $scope.newRestaurant;
      newRestaurantAdd.neighborhood= $scope.newNeighborhood;
      $scope.restaurants.push(newRestaurantAdd);
+     console.log($scope.newNeighborhood);
 
    }
 
