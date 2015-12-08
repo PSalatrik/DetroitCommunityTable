@@ -38,6 +38,7 @@ app.service('yelpService', function($http){
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -45,3 +46,5 @@ app.service('yelpService', function($http){
 
 
            
+=======
+>>>>>>> 1504ba1f0203274d3085bde9749a8fb61f47109e
