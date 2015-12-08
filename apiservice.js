@@ -8,8 +8,10 @@ var app = angular.module("dcTable");
 
 app.controller('yelpity', ['$scope', 'myYelpAPI', function($scope, myYelpAPI) {
     $scope.businesses = [];
+    $scope.addresses = [];
     myYelpAPI.retrieveYelp('', function(data) {
-        $scope.businesses = data.businesses[0].name;
+        $scope.businesses = data.businesses[11].name;
+        $scope.addresses  = data.businesses[11].location.address[0];
         console.log(data);
     });
 
@@ -17,7 +19,7 @@ app.controller('yelpity', ['$scope', 'myYelpAPI', function($scope, myYelpAPI) {
     return {
         "retrieveYelp": function(name, callback) {
             var method = 'GET';
-            var url = 'http://api.yelp.com/v2/search';
+            var url = 'http://api.yelp.com/v2/search/?term=pizza&location=Detroit, MI';
             var params = {
                     callback: 'angular.callbacks._0',
                     location: 'Detroit',
