@@ -29,7 +29,7 @@ app.service('yelpService', function($http){
     }).then(function workingCallback(response){
       displayFoodStuff.data = response.data."whatever.whatever";
     }, function errorCallBack(response){
-      console.log("Stop Yelpeing at me")
+      console.log("Stop Yelping at me")
     });
       
 
