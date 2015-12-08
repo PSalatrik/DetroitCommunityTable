@@ -6,20 +6,27 @@
 
 var app = angular.module("dcTable", [])
 
-app.service('yelpService', function($http){
+app.controller('yelpity', ['$scope', 'yelpService', function($scope, yelpService) {
+    $scope.businesses = [];
+    MyYelpAPI.retrieveYelp('', function(data) {
+        $scope.businesses = data.businesses[0].name;
+        console.log(data);
+    });
 
-   return $http({
+}]).service('yelpService', function($http){
+
+   return {
        var method: 'GET',
        var url: "https://api.yelp.com/v2/business/yelp-detroit",
       
-       var para ={
+       var para = {
         oauth_consumer_key: NuLE3hAVaJWmVMyRMnTM-A,
         oauth_token: WzPzrA7tcIEv-YuRR1_ilXdyylqOdvVH,
         oauth_signature_method: "HMAC-SHA1",
         oauth_timestamp: new Date().getTime(),
         oauth_nonce: randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
 
-    })
+    }
 
       var consumer_secret= adjPf1c0JJy2LWeAsqEz7QrL_sQ
       var token_secret = 8gyS5zdHd4uaVCPiEoxZu_PjOU4
@@ -27,7 +34,7 @@ app.service('yelpService', function($http){
                         params['oauth_signature'] = signature;
           //$http.jsonp(url, {params: params}).success(callback);
     }).then(function workingCallback(response){
-      displayFoodStuff.data = response.data."whatever.whatever";
+      displayFoodStuff.data = response.data.;
     }, function errorCallBack(response){
       console.log("Stop Yelpeing at me")
     });
@@ -36,15 +43,3 @@ app.service('yelpService', function($http){
 })
 
 
-
-
-<<<<<<< HEAD
-
-
-
-
-
-
-           
-=======
->>>>>>> 1504ba1f0203274d3085bde9749a8fb61f47109e
