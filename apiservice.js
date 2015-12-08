@@ -36,10 +36,8 @@ app.controller('yelpity', ['$scope', 'yelpService', function($scope, yelpService
     }).then(function workingCallback(response){
       displayFoodStuff.data = response.data.;
     }, function errorCallBack(response){
-      console.log("Stop Yelpeing at me")
+      console.log("Stop Yelping at me")
     });
       
 
 })
-
-
