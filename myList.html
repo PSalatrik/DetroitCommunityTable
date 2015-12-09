@@ -4,7 +4,7 @@
   <div class="container-fluid bodyStyle">
 
     <div class="row">
-     <h2> Add a Restaurant </h2>
+     <h2> Search for a Restaurant </h2>
         <div class='col-md-12'>
           <div class="form-group">
              <label> Restaurant </label>
@@ -45,19 +45,14 @@
 
     <div class='row' ng-controller="midtownCtrl">
       <div class='col-md-12'>
-        <h2>My Community Table</h2>
+        <h2>My Restaurant List</h2>
           <ul class ="listnoStyle">
-            <li ng-repeat='restaurant in restaurants' | filter: itemsNameorNeighborhood | orderBy: name>
+            <li ng-repeat='restaurant in restaurants | filter: restaurantNameorNeighborhood | orderBy: name'>
               {{restaurant.name}} in {{restaurant.neighborhood}}
             </li>
           </ul>
-      </div>
-    </div>
-
-    <div class='row'>
-      <div class='col-md-12'>
-        <h2> Sort My List </h2>
-          <input type='text' ng-model='itemsNameorNeighborhood' placeholder="I'm Looking For...">
+        <h2> Sort My Restaurant List </h2>
+          <input type='text' ng-model='restaurantNameorNeighborhood' placeholder="Name or Neighborhood">
       </div>
     </div>
 
