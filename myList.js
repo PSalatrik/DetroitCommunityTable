@@ -17,3 +17,16 @@ app.controller('listController', function restaurantList($scope) {
    }
 
 });
+app.controller('searchAPI', ['$scope', 'myYelpAPI', function($scope, myYelpAPI) {
+   
+   myYelpAPI.retrieveYelp('', function(data){
+    for(var i = 0; i < data.businesses.length; i++){
+          var stuff = data.businesses[i];
+          console.log(stuff.name);
+}
+
+
+
+   })
+       
+  }])

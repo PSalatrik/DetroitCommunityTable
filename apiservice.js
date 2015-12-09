@@ -19,7 +19,7 @@ app.controller('yelpity', ['$scope', 'myYelpAPI', function($scope, myYelpAPI) {
     return {
         "retrieveYelp": function(name, callback) {
             var method = 'GET';
-            var url = 'http://api.yelp.com/v2/search/?term=pizza&location=Detroit, MI';
+            var url = 'https://api.yelp.com/v2/search/?term=Restaurants&location=Detroit, Corktown';
             var params = {
                     callback: 'angular.callbacks._0',
                     location: 'Detroit',
