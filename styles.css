@@ -2,13 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Vast+Shadow);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 
-body {
- 	
-}
-
  .dropdown:hover .dropdown-menu {
     display: block;
-    margin-top: 0; // remove the gap so it doesn't close
+    margin-top: 0;
     margin-bottom: 0;
     background-color: 
  }
@@ -50,13 +46,9 @@ body {
 	color: #786E5D;
 }
 
-
-
-.glyphicon .glyphicon-map-marker a:link {
-
+.glyphicon-style {
 	color: #FF9E0A;
 }
-
 
  #imageHead {
  	font-family: 'Vast Shadow';
@@ -153,4 +145,9 @@ footer {
 
 .listnoStyle {
 	list-style-type: none;
+}
+
+.bodyStyle{
+	padding-left: 40px;
+	padding-right: 20px;
 }
