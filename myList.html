@@ -1,8 +1,8 @@
 <div ng-controller = "listController">
-  
+
 <form>
   <div class="container-fluid bodyStyle">
-    
+
     <div class="row">
      <h2> Add a Restaurant </h2>
         <div class='col-md-12'>
@@ -14,20 +14,20 @@
 
     <div class="row">
         <div class='col-md-12'>
-          <div class="form-group">      
+          <div class="form-group">
             <label> Neighborhood</label>
               <div class="radio-inline">
                   <input type="radio" ng-model="newNeighborhood" value="Corktown">Corktown
               </div>
-             
+
               <div class="radio-inline">
                   <input type="radio" ng-model="newNeighborhood" value="Downtown">Downtown
               </div>
-              
+
               <div class="radio-inline">
                   <input type="radio" ng-model="newNeighborhood" value="Eastern Market">Eastern Market
               </div>
-              
+
               <div class="radio-inline">
                   <input type="radio" ng-model="newNeighborhood" value="Midtown">Midtown
               </div>
@@ -43,12 +43,12 @@
       </div>
     </div>
 
-    <div class='row'>
+    <div class='row' ng-controller="searchAPI">
       <div class='col-md-12'>
         <h2>My Community Table</h2>
           <ul class ="listnoStyle">
-            <li ng-repeat='restaurants in restaurants | filter: itemsNameorNeighborhood | orderBy: name'>
-              {{restaurants.rest}} in {{restaurants.neighborhood}} 
+            <li ng-repeat='restaurant in restaurants' | filter: itemsNameorNeighborhood | orderBy: name>
+              {{restaurant.name}} in {{restaurant.neighborhood}}
             </li>
           </ul>
       </div>
@@ -60,12 +60,11 @@
           <input type='text' ng-model='itemsNameorNeighborhood' placeholder="I'm Looking For...">
       </div>
     </div>
-    
+
   </div>
 
 </form>
-<div ng-controller="searchAPI">
-  <p ng-repeat= 'thing in apiList'>{{thing}}</p>
-</div>
+
+
 
 </div>
