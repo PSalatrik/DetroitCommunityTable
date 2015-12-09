@@ -65,8 +65,7 @@
 
 </form>
 <div ng-controller="searchAPI">
-  <p>{{businesses}}</p>
-  <p>{{addresses}}</p>
+  <p ng-repeat= 'thing in apiList'>{{thing}}</p>
 </div>
 
 </div>
