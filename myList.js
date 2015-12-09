@@ -17,7 +17,8 @@ app.controller('listController', function restaurantList($scope) {
    }
 
 });
-app.controller('searchAPI', ['$scope', 'myYelpAPI', 'corktownAPI', 'midtownAPI', 'downtownAPI', 'estmktAPI', function($scope, myYelpAPI, corktownAPI, midtownAPI, downtownAPI, estmktAPI) {
+
+app.controller('apiCtrl', ['$scope', 'myYelpAPI', function($scope, myYelpAPI) {
 
    myYelpAPI.retrieveYelp('', function(data){
     $scope.apiList = [];
@@ -25,41 +26,64 @@ app.controller('searchAPI', ['$scope', 'myYelpAPI', 'corktownAPI', 'midtownAPI',
           var stuff = data.businesses[i];
           var newRestaurantAdd = {};
           newRestaurantAdd.name = stuff.name;
-          newRestaurantAdd.neighborhood= stuff.neighborhood;
+          newRestaurantAdd.neighborhood= stuff.location.neighborhoods;
           $scope.restaurants.push(newRestaurantAdd);
         }
     });
+}])
 
+app.controller('corktownCtrl', ['$scope', 'corktownAPI', function($scope, corktownAPI) {
     corktownAPI.retrieveYelp('', function(data){
      $scope.apiList = [];
      for(var i = 0; i < data.businesses.length; i++){
            var stuff = data.businesses[i];
-           $scope.apiList.push(stuff.name);
-         }
+           var newRestaurantAdd = {};
+           newRestaurantAdd.name = stuff.name;
+           newRestaurantAdd.neighborhood= stuff.location.neighborhoods[0];
+           $scope.restaurants.push(newRestaurantAdd);
+           }
      });
+  }])
 
-     midtownAPI.retrieveYelp('', function(data){
-      $scope.apiList = [];
-      for(var i = 0; i < data.businesses.length; i++){
-            var stuff = data.businesses[i];
-            $scope.apiList.push(stuff.name);
-          }
-      });
 
-      downtownAPI.retrieveYelp('', function(data){
+      app.controller('estmktCtrl', ['$scope', 'estmktAPI', function($scope, estmktAPI) {
+          estmktAPI.retrieveYelp('', function(data){
+           $scope.apiList = [];
+           for(var i = 0; i < data.businesses.length; i++){
+                 var stuff = data.businesses[i];
+                 var newRestaurantAdd = {};
+                 newRestaurantAdd.name = stuff.name;
+                 newRestaurantAdd.neighborhood= stuff.location.neighborhoods[0];
+                 $scope.restaurants.push(newRestaurantAdd);
+                 }
+           });
+        }])
+
+
+            app.controller('downtownCtrl', ['$scope', 'downtownAPI', function($scope, downtownAPI) {
+                downtownAPI.retrieveYelp('', function(data){
+                 $scope.apiList = [];
+                 for(var i = 0; i < data.businesses.length; i++){
+                       var stuff = data.businesses[i];
+                       var newRestaurantAdd = {};
+                       newRestaurantAdd.name = stuff.name;
+                       newRestaurantAdd.neighborhood= stuff.location.neighborhoods[0];
+                       $scope.restaurants.push(newRestaurantAdd);
+                       }
+                 });
+              }])
+
+
+
+  app.controller('midtownCtrl', ['$scope', 'midtownAPI', function($scope, midtownAPI){
+      midtownAPI.retrieveYelp('', function(data){
        $scope.apiList = [];
        for(var i = 0; i < data.businesses.length; i++){
              var stuff = data.businesses[i];
-             $scope.apiList.push(stuff.name);
-           }
+             var newRestaurantAdd = {};
+             newRestaurantAdd.name = stuff.name;
+             newRestaurantAdd.neighborhood= stuff.location.neighborhoods[0];
+             $scope.restaurants.push(newRestaurantAdd);
+             }
        });
-
-       estmktAPI.retrieveYelp('', function(data){
-        $scope.apiList = [];
-        for(var i = 0; i < data.businesses.length; i++){
-              var stuff = data.businesses[i];
-              $scope.apiList.push(stuff.name);
-            }
-        });
-
-  }])
+    }])
