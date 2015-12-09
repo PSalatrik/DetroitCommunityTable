@@ -13,7 +13,18 @@ app.controller('listController', function restaurantList($scope) {
      newRestaurantAdd.name = $scope.newRestaurant;
      newRestaurantAdd.neighborhood= $scope.newNeighborhood;
      $scope.restaurants.push(newRestaurantAdd);
+     var list = $scope.apiList
 
+      
+  }
+
+  $scope.test = function (obj) {
+        if (obj === 'newRestaurant.name') {
+          console.log(true);
+        } 
+        else {
+          console.log("No restaurants match your search");
+        }
    }
 
 });
