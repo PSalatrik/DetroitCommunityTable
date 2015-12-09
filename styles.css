@@ -1,10 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 @import url(https://fonts.googleapis.com/css?family=Vast+Shadow);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Ultra);
 
 body {
+	background-repeat: no-repeat;
+	background-size: 100%;
+
  	
 }
+
 
  .dropdown:hover .dropdown-menu {
     display: block;
@@ -14,7 +19,7 @@ body {
  }
 
  .dropdown-menu {
- 	background-color: #CCB133;
+ 	background-color: #7C9B9B;
  }
 
  .navbar .navbar-nav{
@@ -31,7 +36,8 @@ body {
  }
 
  .navbar-default {
-	background-color: #CCB133;
+	background-color: #7C9B9B;
+	opacity: 60%;
 	border: none;
 	margin-bottom: 0px;
 	}
@@ -59,9 +65,8 @@ body {
 
 
  #imageHead {
- 	font-family: 'Vast Shadow';
+ 	font-family: 'Ultra';
  	width:100%;
- 	background-image: url(img/table-splash-resize.jpg);
  	background-size: cover;
  	color: #786E5D;
  	padding: 250px 0 200px;
