@@ -2,10 +2,10 @@
 
 <div ng-controller = "listController">
 
-<ul class ="listnoStyle" ng-controller="downtownpageCtrl">
-    <li ng-repeat ='restaurant in restaurants | orderBy: "name"' ng-click='select(restaurant)'
+<ul class ="listnoStyle" ng-controller="downtownpageCtrl" >
+    <li class="paginationclass" ng-repeat='restaurant in restaurants | orderBy: "name"' ng-click='select(restaurant)'
     	ng-class='{active: isActive(restaurant)}'>
-    {{restaurant.name}}
+    <div>{{restaurant.name}}</div>
     </li>
 </ul>
 
