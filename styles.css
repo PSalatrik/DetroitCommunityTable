@@ -163,7 +163,7 @@ footer {
 }
 
 .paginationclass div{
-    cursor:pointer;
+    cursor: pointer;
     text-decoration: hightlight;
 }
 .active{
