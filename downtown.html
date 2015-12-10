@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-<p>downtown</p>
-<div ng-controller="listController">
-	<ul class ="listnoStyle" ng-controller="downtownCtrl">
-            <li ng-repeat='restaurant in restaurants | filter: restaurantNameorNeighborhood | orderBy: name'>
-              {{restaurant.name}} 
-            </li>
-          </ul>
-=======
+
 <p>Downtown Restaurants</p>
 
 <div ng-controller = "listController">
 
-<ul class ="listnoStyle" ng-controller="downtownpageCtrl">
-    <li ng-repeat='restaurant in restaurants | filter: restaurantNameorNeighborhood | orderBy: name'>
-    {{restaurant.name}} in {{restaurant.neighborhood}}
+<ul class ="listnoStyle" ng-controller="downtownpageCtrl" >
+    <li class="paginationclass" ng-repeat='restaurant in restaurants | orderBy: "name"' ng-click='select(restaurant)'
+    	ng-class='{active: isActive(restaurant)}'>
+    <div>{{restaurant.name}}</div>
     </li>
 </ul>
 
->>>>>>> b0ecfc8237d2dc94d608f9543618b119bb29ee69
 </div>
