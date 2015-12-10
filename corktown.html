@@ -1,6 +1,11 @@
 <p>corktown</p>
 
-<div ng-controller="yelpity">
-	<p>{{businesses}}</p>
-	<p>{{addresses}}</p>
+<div ng-controller="listController">
+
+	<ul class ="listnoStyle" ng-controller="corktownCtrl">
+            <li ng-repeat='restaurant in restaurants'>
+              {{restaurant.name}} 
+            </li>
+          </ul>
+
 </div>

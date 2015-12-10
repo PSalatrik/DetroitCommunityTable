@@ -43,14 +43,14 @@ app.controller('apiCtrl', ['$scope', 'myYelpAPI', function($scope, myYelpAPI) {
     });
 }])
 
-app.controller('corktownCtrl', ['$scope', 'corktownAPI', function($scope, corktownAPI) {
+app.controller('corktownCtrl', ['$scope', 'corktownAPI',  function($scope, corktownAPI) {
     corktownAPI.retrieveYelp('', function(data){
      $scope.apiList = [];
      for(var i = 0; i < data.businesses.length; i++){
            var stuff = data.businesses[i];
            var newRestaurantAdd = {};
            newRestaurantAdd.name = stuff.name;
-           newRestaurantAdd.neighborhood= stuff.location.neighborhoods[0];
+           //newRestaurantAdd.neighborhood= stuff.location.neighborhoods[0];
            $scope.restaurants.push(newRestaurantAdd);
            }
      });

@@ -85,7 +85,7 @@ app.factory("downtownAPI", function($http) {
         return {
             "retrieveYelp": function(name, callback) {
                 var method = 'GET';
-                var url = 'https://api.yelp.com/v2/search/?term=Restaurants&location=Detroit, Downtown';
+                var url = 'https://api.yelp.com/v2/search/?term=Restaurants&location=Detroit, 48226';
                 var params = {
                         callback: 'angular.callbacks._0',
                         location: 'Detroit',
