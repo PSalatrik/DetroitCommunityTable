@@ -1,7 +1,7 @@
 var app = angular.module('dcTable');
 
 app.controller('corktownpageCtrl', ['$scope', 'corktownAPI', function($scope, corktownAPI) {
-    corktownAPI.retrieveYelp('', function(data){
+    corktownAPI[0].retrieveYelp('', function(data){
      $scope.apiList = [];
      for(var i = 0; i < data.businesses.length; i++){
            var stuff = data.businesses[i];
@@ -13,12 +13,30 @@ app.controller('corktownpageCtrl', ['$scope', 'corktownAPI', function($scope, co
 
 
       $scope.select= function(item) {
-        $scope.selected = item; 
+        var arrayNumber=item.name;      //change to value of button
+        $scope.selected = item;
+        console.log(item);
+        $scope.resturant = item;
+        corktownAPI[2].setProp(arrayNumber,item.name)
+
       };
 
       $scope.isActive = function(item) {
         return $scope.selected === item;
       };
+
+
+//this still might help
+      /*$scope.addNew= function(name, neighborhood) {
+     var newRestaurantAdd = {};
+     newRestaurantAdd.name = $scope.newRestaurant;
+     newRestaurantAdd.neighborhood= $scope.newNeighborhood;
+     $scope.restaurants.push(newRestaurantAdd);
+     var list = $scope.apiList;
+     console.log(item.name);}*/
+
+      
+  
   }])
 
 

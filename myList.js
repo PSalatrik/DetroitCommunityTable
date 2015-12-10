@@ -1,8 +1,8 @@
 var app = angular.module('dcTable');
-
-app.controller('listController', function restaurantList($scope) {
-
+app.controller('listController', ['$scope', 'corktownAPI', function($scope, corktownAPI) {
    $scope.restaurants = [];
+   //make this happen for each item in data as aposed to only first item
+   $scope.pickedRestaurant=[corktownAPI[1].getProp("0")];
 
   $scope.add = function(name, neighborhood) {
      var newRestaurantAdd = {};
@@ -14,7 +14,7 @@ app.controller('listController', function restaurantList($scope) {
       
   }
 
-});
+}]);
 
 app.controller('apiCtrl', ['$scope', 'myYelpAPI', function($scope, myYelpAPI) {
 

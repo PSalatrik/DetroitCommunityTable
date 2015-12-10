@@ -45,12 +45,12 @@
       </div>
     </div>
 
-    <div class='row' ng-controller="midtownCtrl">
+    <div class='row' ng-controller="corktownpageCtrl">
       <div class='col-md-12'>
         <h2>My Restaurant List</h2>
           <ul class ="listnoStyle">
-            <li ng-repeat='restaurant in restaurants | filter: restaurantNameorNeighborhood | orderBy: name'>
-              {{restaurant.name}} in {{restaurant.neighborhood}}
+            <li >
+              {{pickedRestaurant}}
             </li>
           </ul>
         <h2> Sort My Restaurant List </h2>
