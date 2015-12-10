@@ -1,1 +1,11 @@
-<p>downtown</p>
+<p>Downtown Restaurants</p>
+
+<div ng-controller = "listController">
+
+<ul class ="listnoStyle" ng-controller="downtownpageCtrl">
+    <li ng-repeat='restaurant in restaurants | filter: restaurantNameorNeighborhood | orderBy: name'>
+    {{restaurant.name}} in {{restaurant.neighborhood}}
+    </li>
+</ul>
+
+</div>
