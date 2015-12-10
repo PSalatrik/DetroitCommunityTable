@@ -2,11 +2,7 @@ var app = angular.module('dcTable');
 
 app.controller('listController', function restaurantList($scope) {
 
-   $scope.restaurants = [
-     {name: 'Bucharest', neighborhood: 'Downtown'},
-     {name: 'Ottava Via', neighborhood: 'Corktown'},
-     {name: 'Supino Pizzeria', neighborhood: 'Eastern Market'}
-   ];
+   $scope.restaurants = [];
 
   $scope.add = function(name, neighborhood) {
      var newRestaurantAdd = {};
@@ -17,15 +13,6 @@ app.controller('listController', function restaurantList($scope) {
 
       
   }
-
-  $scope.test = function (obj) {
-        if (obj === 'newRestaurant.name') {
-          console.log(true);
-        } 
-        else {
-          console.log("No restaurants match your search");
-        }
-   }
 
 });
 
@@ -50,7 +37,11 @@ app.controller('corktownCtrl', ['$scope', 'corktownAPI',  function($scope, corkt
            var stuff = data.businesses[i];
            var newRestaurantAdd = {};
            newRestaurantAdd.name = stuff.name;
+<<<<<<< HEAD
            //newRestaurantAdd.neighborhood= stuff.location.neighborhoods[0];
+=======
+           newRestaurantAdd.neighborhood= stuff.location.neighborhoods;
+>>>>>>> b0ecfc8237d2dc94d608f9543618b119bb29ee69
            $scope.restaurants.push(newRestaurantAdd);
            }
      });

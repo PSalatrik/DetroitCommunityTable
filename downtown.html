@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p>downtown</p>
 <div ng-controller="listController">
 	<ul class ="listnoStyle" ng-controller="downtownCtrl">
@@ -5,4 +6,16 @@
               {{restaurant.name}} 
             </li>
           </ul>
+=======
+<p>Downtown Restaurants</p>
+
+<div ng-controller = "listController">
+
+<ul class ="listnoStyle" ng-controller="downtownpageCtrl">
+    <li ng-repeat='restaurant in restaurants | filter: restaurantNameorNeighborhood | orderBy: name'>
+    {{restaurant.name}} in {{restaurant.neighborhood}}
+    </li>
+</ul>
+
+>>>>>>> b0ecfc8237d2dc94d608f9543618b119bb29ee69
 </div>
