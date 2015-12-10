@@ -37,11 +37,9 @@ app.controller('corktownCtrl', ['$scope', 'corktownAPI',  function($scope, corkt
            var stuff = data.businesses[i];
            var newRestaurantAdd = {};
            newRestaurantAdd.name = stuff.name;
-<<<<<<< HEAD
            //newRestaurantAdd.neighborhood= stuff.location.neighborhoods[0];
-=======
            newRestaurantAdd.neighborhood= stuff.location.neighborhoods;
->>>>>>> b0ecfc8237d2dc94d608f9543618b119bb29ee69
+
            $scope.restaurants.push(newRestaurantAdd);
            }
      });
