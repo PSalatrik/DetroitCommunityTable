@@ -32,22 +32,22 @@ app.controller('listController', ['$scope', 'midtownAPI', function($scope, midto
 
 }]);
 //
-// app.controller('listController', ['$scope', 'downtownAPI', function($scope, downtownAPI) {
-//    $scope.restaurants = [];
-//    //make this happen for each item in data as aposed to only first item
-//    $scope.pickedRestaurant=[downtownAPI[1].getProp("0")];
-//
-//   $scope.add = function(name, neighborhood) {
-//      var newRestaurantAdd = {};
-//      newRestaurantAdd.name = $scope.newRestaurant;
-//      newRestaurantAdd.neighborhood= $scope.newNeighborhood;
-//      $scope.restaurants.push(newRestaurantAdd);
-//      var list = $scope.apiList
-//
-//
-//   }
-//
-// }]);
+app.controller('listController', ['$scope', 'downtownAPI', function($scope, downtownAPI) {
+  // $scope.restaurants = [];
+   //make this happen for each item in data as aposed to only first item
+   $scope.pickedRestaurant=downtownAPI[1].getProp();
+
+  // $scope.add = function(name, neighborhood) {
+  //    var newRestaurantAdd = {};
+  //    newRestaurantAdd.name = $scope.newRestaurant;
+  //    newRestaurantAdd.neighborhood= $scope.newNeighborhood;
+  //    $scope.restaurants.push(newRestaurantAdd);
+  //    var list = $scope.apiList
+  //
+  //
+  // }
+
+}]);
 //
 // app.controller('listController', ['$scope', 'estmktAPI', function($scope, estmktAPI) {
 //    $scope.restaurants = [];
