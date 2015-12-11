@@ -47,8 +47,8 @@
       <div class='col-md-12'>
         <h2>My Restaurant List</h2>
           <ul class ="listnoStyle">
-            <li>
-              {{pickedRestaurant}}
+            <li ng-repeat="place in pickedRestaurant">
+              {{place}}
             </li>
           </ul>
         <h2> Sort My Restaurant List </h2>

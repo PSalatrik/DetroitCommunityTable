@@ -9,7 +9,7 @@
  var data = [];
 
  app.factory("corktownAPI", function($http) {
-
+var data = [];
    var restaurantList = [];
 
    var method = 'GET';
@@ -49,13 +49,14 @@
        return restaurantList;
 
      },
-     getProp: function(name) {
-       return data.name;
+     getProp: function(value) {
+
+       return data;
 
      },
-     setProp: function(name, value) {
+     setProp: function(value) {
 
-       data.name = value;
+       data.push(value);
 
      }
    }

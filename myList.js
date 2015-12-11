@@ -10,7 +10,7 @@ app.controller('listController', ['$scope', 'corktownAPI', function($scope, cork
      newRestaurantAdd.name = $scope.newRestaurant;
      newRestaurantAdd.neighborhood= $scope.newNeighborhood;
      $scope.restaurants.push(newRestaurantAdd);
-     
+
     }
 
 }]);

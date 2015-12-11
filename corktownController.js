@@ -1,7 +1,7 @@
 var app = angular.module('dcTable');
 
 app.controller('corktownpageCtrl', ['$scope', 'corktownAPI', function($scope, corktownAPI) {
-  
+
       $scope.restaurants = corktownAPI.getRestaurants();
 
       $scope.select= function(item) {
@@ -9,7 +9,7 @@ app.controller('corktownpageCtrl', ['$scope', 'corktownAPI', function($scope, co
         $scope.selected = item;
         console.log(item);
         $scope.restaurant = item;
-        corktownAPI.setProp(objectName,item.name)
+        corktownAPI.setProp(item)
 
       };
 
@@ -17,18 +17,4 @@ app.controller('corktownpageCtrl', ['$scope', 'corktownAPI', function($scope, co
         return $scope.selected === item;
       };
 
-
-//this still might help
-      /*$scope.addNew= function(name, neighborhood) {
-     var newRestaurantAdd = {};
-     newRestaurantAdd.name = $scope.newRestaurant;
-     newRestaurantAdd.neighborhood= $scope.newNeighborhood;
-     $scope.restaurants.push(newRestaurantAdd);
-     var list = $scope.apiList;
-     console.log(item.name);}*/
-
-      
-  
   }])
-
-
