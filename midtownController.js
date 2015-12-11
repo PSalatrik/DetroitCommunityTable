@@ -2,7 +2,7 @@ var app = angular.module('dcTable');
 
 app.controller('midtownpageCtrl', ['$scope', 'midtownAPI', function($scope, midtownAPI) {
     midtownAPI[0].retrieveYelp('', function(data){
-     $scope.apiList = [];
+     $scope.restaurants = [];
      for(var i = 0; i < data.businesses.length; i++){
            var stuff = data.businesses[i];
            var newRestaurantAdd = {};

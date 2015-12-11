@@ -78,13 +78,13 @@
      }
    }, {
      "getProp": function(name) {
-       return data.name;
+       return data;
 
      }
    }, {
-     "setProp": function(name, value) {
+     "setProp": function(value) {
 
-       data.name = value;
+       data.push(value);
      }
    }];
 
