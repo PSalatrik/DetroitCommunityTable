@@ -25,16 +25,4 @@ app.controller('corktownpageCtrl', ['$scope', 'corktownAPI', function($scope, co
         return $scope.selected === item;
       };
 
-
-//this still might help
-      /*$scope.addNew= function(name, neighborhood) {
-     var newRestaurantAdd = {};
-     newRestaurantAdd.name = $scope.newRestaurant;
-     newRestaurantAdd.neighborhood= $scope.newNeighborhood;
-     $scope.restaurants.push(newRestaurantAdd);
-     var list = $scope.apiList;
-     console.log(item.name);}*/
-
-
-
   }])
