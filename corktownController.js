@@ -1,23 +1,15 @@
 var app = angular.module('dcTable');
 
 app.controller('corktownpageCtrl', ['$scope', 'corktownAPI', function($scope, corktownAPI) {
-    corktownAPI[0].retrieveYelp('', function(data){
-     $scope.apiList = [];
-     for(var i = 0; i < data.businesses.length; i++){
-           var stuff = data.businesses[i];
-           var newRestaurantAdd = {};
-           newRestaurantAdd.name = stuff.name;
-           $scope.restaurants.push(newRestaurantAdd);
-           }
-     });
-
-
+  
+      $scope.restaurants = corktownAPI.getRestaurants();
+      
       $scope.select= function(item) {
-        var arrayNumber=item.name;      //change to value of button
+        var objectName = item.name;      //change to value of button
         $scope.selected = item;
         console.log(item);
         $scope.resturant = item;
-        corktownAPI[2].setProp(arrayNumber,item.name)
+        corktownAPI.setProp(objectName,item.name)
 
       };
 

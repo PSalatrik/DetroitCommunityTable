@@ -6,7 +6,7 @@
 <ul class ="listnoStyle" ng-controller="corktownpageCtrl" >
     <li class="paginationclass" ng-repeat='restaurant in restaurants | orderBy: "name"' ng-click='select(restaurant)' ng-Dblclick='addNew()'
     	ng-class='{active: isActive(restaurant)}'>
-    <div>{{restaurant.name}}</div>
+    <div>{{restaurant}}</div>
     </li>
 </ul>
 

@@ -3,7 +3,7 @@ var app = angular.module('dcTable');
 app.controller('listController', ['$scope', 'corktownAPI', function($scope, corktownAPI) {
    $scope.restaurants = [];
    //make this happen for each item in data as opposed to only first item
-   $scope.pickedRestaurant=[corktownAPI[1].getProp("0")];
+   $scope.pickedRestaurant = corktownAPI.getProp();
 
   $scope.add = function(name, neighborhood) {
      var newRestaurantAdd = {};
@@ -18,7 +18,7 @@ app.controller('listController', ['$scope', 'corktownAPI', function($scope, cork
 
 app.controller('listController', ['$scope', 'midtownAPI', function($scope, midtownAPI) {
    $scope.restaurants = [];
-   //make this happen for each item in data as aposed to only first item
+   //make this happen for each item in data as opposed to only first item
    $scope.pickedRestaurant=[midtownAPI[1].getProp("0")];
 
   $scope.add = function(name, neighborhood) {
