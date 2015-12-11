@@ -9,6 +9,9 @@
           <div class="form-group">
              <label> Restaurant </label>
              <typedir arr="arr" items="items" prompt="Find a restaurant!" title="name" subtitle="abbreviation" model="name" on-select="onItemSelected()"></typedir>
+             <div ng-repeat="eatery in arr">
+                {{eatery}}
+            </div>
           </div>
         </div>
     </div>
@@ -31,8 +34,8 @@
               <div class="radio-inline">
                   <input type="radio" ng-model="newNeighborhood" value="Midtown">Midtown
               </div>
-          <div>
-        </div>
+         </div>
+       </div>
     </div>
 
     <div class="row">
@@ -57,13 +60,12 @@
       </div>
     </div>
 
-  </div>
+
 
 </form>
- <div ng-repeat="eatery in arr">
-    {{eatery}}
- </div>
 
 
 </div>
+
+
 
