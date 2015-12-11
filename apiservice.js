@@ -5,8 +5,8 @@
  }
 
  var app = angular.module("dcTable");
- var data = [];
 
+ var data = [];
 
  app.factory("corktownAPI", function($http) {
 

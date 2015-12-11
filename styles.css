@@ -6,11 +6,8 @@
 
 body {
 	background-repeat: no-repeat;
-	background-size: 100%;
-
- 	
+	background-size: 100%; 	
 }
-
 
  .dropdown:hover .dropdown-menu {
     display: block;
@@ -41,7 +38,7 @@ body {
 	opacity: 60%;
 	border: none;
 	margin-bottom: 0px;
-	}
+}
 
 .navbar-default .navbar-nav li a {
 	color: white;
@@ -124,15 +121,18 @@ h1{
 	color: #786E5D;
 	padding-right: 50%;
 }
+
 #twitter {
  	color: #786E5D;
 }
+
 #footerfont {
 	 font-family: Playfair Display;
 	 color: #786E5D;
 	 display: inline-block;
 	 font-size: 10px;
  }
+
 footer {
 	 bottom: 0;
 	 width: 100%;
@@ -140,10 +140,12 @@ footer {
 	 background-color: #f5f5f5;
 	 padding-right: 10px;
 }
+
 .footerlist {
 	list-style-type: none;
 	text-align: right;
 }
+
 .horizontal {
 	 display: inline-block;
 	 padding-top: 1%;
