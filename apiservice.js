@@ -5,61 +5,49 @@
  }
 
  var app = angular.module("dcTable");
-
  var data = [];
 
+
  app.factory("corktownAPI", function($http) {
-var data = [];
-   var restaurantList = [];
 
-   var method = 'GET';
-   var url = 'https://api.yelp.com/v2/search/?term=Restaurants&location=Detroit, Corktown';
-   var params = {
-     callback: 'angular.callbacks._0',
-     location: 'Detroit',
-     oauth_consumer_key: 'NuLE3hAVaJWmVMyRMnTM-A', //Consumer Key
-     oauth_token: 'WzPzrA7tcIEv-YuRR1_ilXdyylqOdvVH', //Token
-     oauth_signature_method: "HMAC-SHA1",
-     oauth_timestamp: new Date().getTime(),
-     oauth_nonce: randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
-     term: 'food'
-   };
-
-   var consumerSecret = 'adjPf1c0JJy2LWeAsqEz7QrL_sQ'; //Consumer Secret
-   var tokenSecret = '8gyS5zdHd4uaVCPiEoxZu_PjOU4'; //Token Secret
-   var signature = oauthSignature.generate(method, url, params, consumerSecret, tokenSecret, {
-     encodeSignature: false
-   });
-   params['oauth_signature'] = signature;
-
-   $http.jsonp(url, {
-     params: params
-   }).success(function(response) {
-     console.log("hola amigos");
-     for (var i = 0; i < response.businesses.length; i++) {
-       var stuff = response.businesses[i];
-       restaurantList.push(stuff.name);
+   return [{
+     "retrieveYelp": function(name, callback) {
+       var method = 'GET';
+       var url = 'https://api.yelp.com/v2/search/?term=Restaurants&location=Detroit, Corktown';
+       var params = {
+         callback: 'angular.callbacks._0',
+         location: 'Detroit',
+         oauth_consumer_key: 'NuLE3hAVaJWmVMyRMnTM-A', //Consumer Key
+         oauth_token: 'WzPzrA7tcIEv-YuRR1_ilXdyylqOdvVH', //Token
+         oauth_signature_method: "HMAC-SHA1",
+         oauth_timestamp: new Date().getTime(),
+         oauth_nonce: randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
+         term: 'food'
+       };
+       var consumerSecret = 'adjPf1c0JJy2LWeAsqEz7QrL_sQ'; //Consumer Secret
+       var tokenSecret = '8gyS5zdHd4uaVCPiEoxZu_PjOU4'; //Token Secret
+       var signature = oauthSignature.generate(method, url, params, consumerSecret, tokenSecret, {
+         encodeSignature: false
+       });
+       params['oauth_signature'] = signature;
+       $http.jsonp(url, {
+         params: params
+       }).success(callback);
      }
-   });
-
-   return {
-
-     getRestaurants: function() {
-       console.log(restaurantList);
-       return restaurantList;
-
-     },
-     getProp: function(value) {
-
+   }, {
+     "getProp": function() {
+       console.log("getting the list")
        return data;
 
-     },
-     setProp: function(value) {
+     }
+   }, {
+     "setProp": function(value) {
 
        data.push(value);
-
+       console.log(data);
      }
-   }
+   }];
+
  });
 
  app.factory("midtownAPI", function($http) {
