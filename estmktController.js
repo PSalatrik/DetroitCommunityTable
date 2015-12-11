@@ -1,7 +1,7 @@
 var app = angular.module('dcTable');
 
 app.controller('estmktpageCtrl', ['$scope', 'estmktAPI', function($scope, estmktAPI) {
-    estmktAPI.retrieveYelp('', function(data){
+    estmktAPI[0].retrieveYelp('', function(data){
      $scope.apiList = [];
      for(var i = 0; i < data.businesses.length; i++){
            var stuff = data.businesses[i];
@@ -13,12 +13,16 @@ app.controller('estmktpageCtrl', ['$scope', 'estmktAPI', function($scope, estmkt
 
 
       $scope.select= function(item) {
-        $scope.selected = item; 
+        var arrayNumber=item.name;      //change to value of button
+        $scope.selected = item;
+        console.log(item);
+        $scope.resturant = item;
+        estmktAPI[2].setProp(arrayNumber,item.name);
+
       };
 
       $scope.isActive = function(item) {
         return $scope.selected === item;
       };
-  }])
 
-
+}]);

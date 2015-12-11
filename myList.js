@@ -1,7 +1,8 @@
 var app = angular.module('dcTable');
+
 app.controller('listController', ['$scope', 'corktownAPI', function($scope, corktownAPI) {
    $scope.restaurants = [];
-   //make this happen for each item in data as aposed to only first item
+   //make this happen for each item in data as opposed to only first item
    $scope.pickedRestaurant=[corktownAPI[1].getProp("0")];
 
   $scope.add = function(name, neighborhood) {
@@ -11,79 +12,57 @@ app.controller('listController', ['$scope', 'corktownAPI', function($scope, cork
      $scope.restaurants.push(newRestaurantAdd);
      var list = $scope.apiList
 
-      
+    }
+
+}]);
+
+app.controller('listController', ['$scope', 'midtownAPI', function($scope, midtownAPI) {
+   $scope.restaurants = [];
+   //make this happen for each item in data as aposed to only first item
+   $scope.pickedRestaurant=[midtownAPI[1].getProp("0")];
+
+  $scope.add = function(name, neighborhood) {
+     var newRestaurantAdd = {};
+     newRestaurantAdd.name = $scope.newRestaurant;
+     newRestaurantAdd.neighborhood= $scope.newNeighborhood;
+     $scope.restaurants.push(newRestaurantAdd);
+     var list = $scope.apiList
+
+
   }
 
 }]);
 
-app.controller('apiCtrl', ['$scope', 'myYelpAPI', function($scope, myYelpAPI) {
+app.controller('listController', ['$scope', 'downtownAPI', function($scope, downtownAPI) {
+   $scope.restaurants = [];
+   //make this happen for each item in data as aposed to only first item
+   $scope.pickedRestaurant=[downtownAPI[1].getProp("0")];
 
-   myYelpAPI.retrieveYelp('', function(data){
-    $scope.apiList = [];
-    for(var i = 0; i < data.businesses.length; i++){
-          var stuff = data.businesses[i];
-          var newRestaurantAdd = {};
-          newRestaurantAdd.name = stuff.name;
-          newRestaurantAdd.neighborhood= stuff.location.neighborhoods;
-          $scope.restaurants.push(newRestaurantAdd);
-        }
-    });
-}])
-
-app.controller('corktownCtrl', ['$scope', 'corktownAPI',  function($scope, corktownAPI) {
-    corktownAPI.retrieveYelp('', function(data){
-     $scope.apiList = [];
-     for(var i = 0; i < data.businesses.length; i++){
-           var stuff = data.businesses[i];
-           var newRestaurantAdd = {};
-           newRestaurantAdd.name = stuff.name;
-           //newRestaurantAdd.neighborhood= stuff.location.neighborhoods[0];
-           newRestaurantAdd.neighborhood= stuff.location.neighborhoods;
-
-           $scope.restaurants.push(newRestaurantAdd);
-           }
-     });
-  }])
+  $scope.add = function(name, neighborhood) {
+     var newRestaurantAdd = {};
+     newRestaurantAdd.name = $scope.newRestaurant;
+     newRestaurantAdd.neighborhood= $scope.newNeighborhood;
+     $scope.restaurants.push(newRestaurantAdd);
+     var list = $scope.apiList
 
 
-      app.controller('estmktCtrl', ['$scope', 'estmktAPI', function($scope, estmktAPI) {
-          estmktAPI.retrieveYelp('', function(data){
-           $scope.apiList = [];
-           for(var i = 0; i < data.businesses.length; i++){
-                 var stuff = data.businesses[i];
-                 var newRestaurantAdd = {};
-                 newRestaurantAdd.name = stuff.name;
-                 newRestaurantAdd.neighborhood= stuff.location.neighborhoods[0];
-                 $scope.restaurants.push(newRestaurantAdd);
-                 }
-           });
-        }])
+  }
+
+}]);
+
+app.controller('listController', ['$scope', 'estmktAPI', function($scope, estmktAPI) {
+   $scope.restaurants = [];
+   //make this happen for each item in data as aposed to only first item
+   $scope.pickedRestaurant=[estmktAPI[1].getProp("0")];
+
+  $scope.add = function(name, neighborhood) {
+     var newRestaurantAdd = {};
+     newRestaurantAdd.name = $scope.newRestaurant;
+     newRestaurantAdd.neighborhood= $scope.newNeighborhood;
+     $scope.restaurants.push(newRestaurantAdd);
+     var list = $scope.apiList
 
 
-            app.controller('downtownCtrl', ['$scope', 'downtownAPI', function($scope, downtownAPI) {
-                downtownAPI.retrieveYelp('', function(data){
-                 $scope.apiList = [];
-                 for(var i = 0; i < data.businesses.length; i++){
-                       var stuff = data.businesses[i];
-                       var newRestaurantAdd = {};
-                       newRestaurantAdd.name = stuff.name;
-                       newRestaurantAdd.neighborhood= stuff.location.neighborhoods[0];
-                       $scope.restaurants.push(newRestaurantAdd);
-                       }
-                 });
-              }])
+  }
 
-
-
-  app.controller('midtownCtrl', ['$scope', 'midtownAPI', function($scope, midtownAPI){
-      midtownAPI.retrieveYelp('', function(data){
-       $scope.apiList = [];
-       for(var i = 0; i < data.businesses.length; i++){
-             var stuff = data.businesses[i];
-             var newRestaurantAdd = {};
-             newRestaurantAdd.name = stuff.name;
-             newRestaurantAdd.neighborhood= stuff.location.neighborhoods[0];
-             $scope.restaurants.push(newRestaurantAdd);
-             }
-       });
-    }])
+}]);
