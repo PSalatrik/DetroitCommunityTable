@@ -3,12 +3,12 @@ var app = angular.module('dcTable');
 app.controller('corktownpageCtrl', ['$scope', 'corktownAPI', function($scope, corktownAPI) {
   
       $scope.restaurants = corktownAPI.getRestaurants();
-      
+
       $scope.select= function(item) {
-        var objectName = item.name;      //change to value of button
+        var objectName = item;      //change to value of button
         $scope.selected = item;
         console.log(item);
-        $scope.resturant = item;
+        $scope.restaurant = item;
         corktownAPI.setProp(objectName,item.name)
 
       };
