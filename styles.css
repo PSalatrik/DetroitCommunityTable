@@ -64,6 +64,7 @@ body {
  #imageHead {
  	font-family: 'Ultra';
  	width:100%;
+ 	background-image: url(img/table-splash-resize.jpg);
  	background-size: cover;
  	color: #786E5D;
  	padding: 250px 0 200px;
