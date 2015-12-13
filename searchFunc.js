@@ -1,4 +1,4 @@
-var app = angular.module('dcTable');
+/*var app = angular.module('dcTable');
 
 app.controller('listController', ['$scope', 'corktownAPI', function($scope, corktownAPI) {
   
@@ -54,4 +54,4 @@ app.directive('typedir', function($timeout){
     },
     templateUrl: 'searchTemplate.html'
   };
-});
+});*/
