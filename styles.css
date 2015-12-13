@@ -10,20 +10,16 @@ body {
 }
 
 .nav{
-	z-index: 20;
-	height:
+	overflow: visible;
 }
 
-
-.ng-view {
- 	z-index: 10;
- }
 
  .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
     margin-bottom: 0;
-    background-color: 
+    background-color: ;
+    overflow: vi
  }
 
  .dropdown-menu {
@@ -41,6 +37,7 @@ body {
  	text-align: center;
  	padding-left: 0px;
  	padding-right: 0px;
+ 	overflow: visible;
  }
 
  .navbar-default {
@@ -87,7 +84,7 @@ body {
 
 h1{
 	color: #786E5D;
-	font-size: 54px;
+	font-size: 48px;
 }
 
 #imageHead img {
@@ -176,8 +173,16 @@ footer {
 
 .paginationclass div{
     cursor: pointer;
-    text-decoration: hightlight;
+    text-decoration: highlight;
 }
 .active{
     color: #FF9E0A;
+}
+
+#status {
+	font-size: 14px;
+}
+p {
+	padding-left: 10px;
+	padding-right: 10px
 }

@@ -6,5 +6,6 @@ app.controller('listController', ['$scope', 'corktownAPI', 'midtownAPI', 'downto
    $scope.pickedRestaurant = midtownAPI[1].getProp();
    $scope.pickedRestaurant = downtownAPI[1].getProp();
    $scope.pickedRestaurant = estmktAPI[1].getProp();
+   
 
 }]);
