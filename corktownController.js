@@ -8,6 +8,7 @@ app.controller('corktownpageCtrl', ['$scope', 'corktownAPI', function($scope, co
            var newRestaurantAdd = {};
            newRestaurantAdd.name = stuff.name;
            $scope.restaurants.push(newRestaurantAdd);
+           console.log($scope.restaurants);
            }
      });
 

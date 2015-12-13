@@ -1,7 +1,7 @@
 <p>Corktown</p>
 
 
-<div ng-controller = "listController">
+<div>
 
 <ul class ="listnoStyle" ng-controller="corktownpageCtrl">
     <li class="paginationclass" ng-repeat='restaurant in restaurants | orderBy: "name"' ng-click='select(restaurant)' ng-class='{active: isActive(restaurant)}'>
