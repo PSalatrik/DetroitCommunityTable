@@ -22,7 +22,15 @@
   },
   "homepage": "https://github.com/PSalatrik/DetroitCommunityTable#readme",
   "dependencies": {
+    "angular": "^1.4.8",
     "bootstrap": "^3.3.6",
+    "express": "^4.13.3",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-notify": "^2.2.0",
     "jquery": "^2.1.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
   }
 }
