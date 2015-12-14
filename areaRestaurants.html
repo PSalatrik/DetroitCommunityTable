@@ -4,7 +4,11 @@
 <div>
     <ul class="listnoStyle">
         <li class="paginationclass" ng-repeat='restaurant in vm.restaurants | orderBy: "name"' ng-click='vm.select(restaurant)' ng-class='{active: vm.isActive(restaurant)}'>
-            <div>{{restaurant.name}}</div>
+            <div class="list-group-item">
+                <a ng-href="{{restaurant.url}}"> {{restaurant.name}} </a>
+                <p> Rating: {{restaurant.rating}} stars </p>
+                <img class="pgimages" src='' />
+            </div>
         </li>
     </ul>
 </div>
@@ -12,12 +16,7 @@
     <div class='col-md-12'>
         <h2>My Restaurant List</h2>
         <ul class="listnoStyle">
-            <div ng-repeat="place in vm.saved_restaurants" class="list-group-item">
-                {{place}}
-                <a href="http://www.yelp.com/biz/republic-detroit-2"> Republic </a>
-                <p> Rating: 5 Stars </p>
-                <img class="pgimages" src='' />
-            </div>
+            {{place.name}}
         </ul>
         <!-- <h2> Sort My Restaurant List </h2>
                     <input type='text' ng-model='vm.sort_by' placeholder="Restaurant Name"> -->
