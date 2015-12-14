@@ -3,22 +3,27 @@
 <head>
 	<title>Detroit Community Table</title>
 	<meta charset="UTF-8">
+	<!--jQuery-->
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<!--Bootstrap Javascript-->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="oauth-signature.js"></script>
+	<!--Bootstrap for Footer Social Media Icons<-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!--Bootstrap for CSS-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<!--Our Stylesheet-->
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body ng-app="dcTable">
+<!--Facebook-->
 <script type="text/javascript" src="fbtry.js"></script>
 <div id="fb-root"></div>
 
  <!-- Navigation background="http://static1.squarespace.com/static/5420bea4e4b0c4ad91c3c88a/5420bec5e4b09194f76b07a3/54356506e4b02f8e532c1e78/1412797111274/beirgarten.jpg?format=1000w
 "/-->
 <div class="container-fluid">
-	<nav class="row navbar navbar-default navbar-custom navbar-static-top">
+	<nav class="row navbar navbar-default navbar-custom navbar-fixed-top">
 
 	        <!-- Brand and toggle get grouped for better mobile display -->
 	        <div class="navbar-header page-scroll">
@@ -40,15 +45,15 @@
 						<!-- <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> -->
 					    <a href="#">Neighborhoods</a>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-						    	<li><a href="#/corktown">Corktown</a></li>
-						    	<li><a href="#/downtown">Downtown</a></li>
-						    	<li><a href="#/estmkt">Eastern Market</a></li>
-						    	<li><a href="#/midtown">Midtown</a></li>
+						    	<li><a href="#/areas/corktown">Corktown</a></li>
+						    	<li><a href="#/areas/downtown">Downtown</a></li>
+						    	<li><a href="#/areas/estmkt">Eastern Market</a></li>
+						    	<li><a href="#/areas/midtown">Midtown</a></li>
 							</ul>
 					<!-- </div> -->
 					</li>
 	                <li>
-	                    <a href="#/myList">My Community Table</a>
+	                    <a href="#/restaurants">My Community Table</a>
 	                </li>
 	                <li class="dropdown" id="menuLogin">
             			<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
@@ -73,16 +78,19 @@
 </div>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!--Angular-->
 <script src="https://code.angularjs.org/1.3.16/angular.js"></script>
+<!--Angular Router-->
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-route.js"></script>
+<!--Main Javascript File-->
 <script type="text/javascript" src="app.js"></script>
+<!--API Javascript File-->
 <script type="text/javascript" src="apiservice.js"></script>
+<!--My List JavaScript-->
 <script src="myList.js"></script>
-<script src="midtownController.js"></script>
-<script src="corktownController.js"></script>
-<script src="downtownController.js"></script>
-<script src="estmktController.js"></script>
-<script type="text/javascript" src="searchFunc.js"></script>
+<script src="displayRestaurantsController.js"></script>
+<!--Search Function JavaScript-->
+<!--<script src="searchFunc.js"></script>-->
 
 
 </body>

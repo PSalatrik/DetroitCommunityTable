@@ -9,6 +9,16 @@ body {
 	background-size: 100%; 	
 }
 
+.nav{
+	z-index: 20;
+	height:
+}
+
+
+.ng-view {
+ 	z-index: 10;
+ }
+
  .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
@@ -171,4 +181,8 @@ footer {
 }
 .active{
     color: #FF9E0A;
+}
+
+#area_title{
+	margin-top: 50px; //hack
 }
