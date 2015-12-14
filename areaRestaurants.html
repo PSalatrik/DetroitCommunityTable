@@ -1,0 +1,8 @@
+<p>{{vm.area_name}} Restaurants</p>
+<div>
+    <ul class="listnoStyle">
+        <li class="paginationclass" ng-repeat='restaurant in vm.restaurants | orderBy: "name"' ng-click='vm.select(restaurant)' ng-class='{active: vm.isActive(restaurant)}'>
+            <div>{{restaurant.name}}</div>
+        </li>
+    </ul>
+</div>
