@@ -1,63 +1,60 @@
 var app = angular.module('dcTable');
 
-app.controller('listController', ['$scope', 'corktownAPI', function($scope, corktownAPI) {
+app.controller('myListController', ['$scope', '$http', 'yelpApi', function($scope, $http, yelpApi) {
+    $scope.vm = {};
+    $scope.vm.items = [];
 
-   $scope.pickedRestaurant = corktownAPI[1].getProp();
-  //  $scope.pickedRestaurant = midtownAPI[1].getProp();
-  //  $scope.pickedRestaurant = downtownAPI[1].getProp();
-  //  $scope.pickedRestaurant = estmktAPI[1].getProp();
+    yelpApi.retrieveYelp('Detroit', function(data) {
+        $scope.vm.items = data.businesses;
+    });
 
-   corktownAPI[0].retrieveYelp('', function(data){
+    $http.get('/api/restaurants/saved')
+     .success(function(items) {
+         $scope.vm.saved_restaurants = items;
+     });
 
-          $scope.items = data.businesses;
-          console.log($scope.items);
-
+    $scope.vm.selectItem = function(item) {
+        $http.post('/api/restaurants/add', {
+            restaurant: item
+        }).success(function(data) {
+            $scope.vm.name = "";
+            $scope.vm.saved_restaurants = data;
         });
+    };
 
-   var work = $scope.arr = [];
-  var youBetter = work.toString();
-  $scope.name = '';
-
-  $scope.onItemSelected = function() {
-
-    $scope.arr.push($scope.name);
-  };
 
 }]);
 
-app.directive('typedir', function($timeout){
-  return {
-    restrict: 'AEC',
-    transclude: true,
-    scope: {
-      items: '=',
-      prompt: '@',
-      title: '@',
-      subtitle: '@',
-      model: '=',
-      onSelect: '&'
-    },
-    link: function(scope, elem, attrs){
-      scope.handleSelection = function(selectedItem){
-        scope.model = selectedItem;
-        scope.current = 0;
-        scope.selected = true;
-        $timeout(function() {
-          scope.onSelect();
-        }, 200);
-        scope.current = selectedItem;
-      };
-      scope.current = 0;
-      scope.selected = true;
-      scope.isCurrent = function(index){
-        return scope.current == index;
+app.directive('typedir', function($timeout) {
+    return {
+        restrict: 'AEC',
+        transclude: true,
+        scope: {
+            items: '=',
+            prompt: '@',
+            title: '@',
+            subtitle: '@',
+            model: '=',
+            onSelect: '&'
+        },
+        link: function(scope, elem, attrs) {
+            scope.handleSelection = function(selectedItem) {
+                scope.model = selectedItem;
+                scope.current = 0;
+                scope.selected = true;
+                scope.current = selectedItem;
+                scope.onSelect()(selectedItem);
+            };
+            scope.current = 0;
+            scope.selected = true;
+            scope.isCurrent = function(index) {
+                return scope.current == index;
+            };
+            scope.setCurrent = function(index) {
+                scope.current = index;
 
-      };
-      scope.setCurrent = function(index){
-        scope.current = index;
-
-      };
-    },
-    templateUrl: 'searchTemplate.html'
-  };
+            };
+        },
+        templateUrl: 'searchTemplate.html'
+    };
 });

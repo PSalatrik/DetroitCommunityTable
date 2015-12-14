@@ -181,3 +181,7 @@ footer {
 .active{
     color: #FF9E0A;
 }
+
+#area_title{
+	margin-top: 50px; //hack
+}

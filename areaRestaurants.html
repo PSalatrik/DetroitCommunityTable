@@ -1,8 +1,22 @@
-<p>{{vm.area_name}} Restaurants</p>
+<div id="area_title">
+<h2 ng-bind='vm.area_display'></h2>
+</div>
 <div>
     <ul class="listnoStyle">
         <li class="paginationclass" ng-repeat='restaurant in vm.restaurants | orderBy: "name"' ng-click='vm.select(restaurant)' ng-class='{active: vm.isActive(restaurant)}'>
             <div>{{restaurant.name}}</div>
         </li>
     </ul>
+</div>
+<div class='row'>
+    <div class='col-md-12'>
+        <h2>My Restaurant List</h2>
+        <ul class="listnoStyle">
+            <li ng-repeat="place in vm.saved_restaurants">
+                {{place.name}}
+            </li>
+        </ul>
+        <!-- <h2> Sort My Restaurant List </h2>
+                    <input type='text' ng-model='vm.sort_by' placeholder="Restaurant Name"> -->
+    </div>
 </div>
