@@ -12,9 +12,11 @@
 }
 
 .list-group-item {
-	width: 50%;
-	text-align: center;
 	font-family: Oswald;
+}
+
+.form-control {
+padding-right: 10px;
 }
 
 .cursivefont {
@@ -193,9 +195,17 @@ p {
 	padding-right: 10px
 }
 
+input {
+	padding-right: 10px;
+}
+
 img {
 	border-radius: 50%;
 	overflow: hidden;
 	border: solid;
 	border-color: #786E5D
+}
+
+h2{
+	text-align: center;
 }
