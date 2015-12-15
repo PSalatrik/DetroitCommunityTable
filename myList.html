@@ -13,45 +13,17 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="row">
-        <div class='col-md-12'>
-          <div class="form-group">
-            <label> Neighborhood</label>
-              <div class="radio-inline">
-                  <input type="radio" ng-model="newNeighborhood" value="Corktown">Corktown
-              </div>
 
-              <div class="radio-inline">
-                  <input type="radio" ng-model="newNeighborhood" value="Downtown">Downtown
-              </div>
-
-              <div class="radio-inline">
-                  <input type="radio" ng-model="newNeighborhood" value="Eastern Market">Eastern Market
-              </div>
-
-              <div class="radio-inline">
-                  <input type="radio" ng-model="newNeighborhood" value="Midtown">Midtown
-              </div>
-         </div>
-       </div>
-    </div> -->
-            <!-- <div class="row">
-                <div class='col-md-12'>
-                    <button type="submit" ng-click="vm.addToList()" class="btn btn-default"> Add to List </button>
-                </div>
-                <div class='col-md-6'>
-                </div>
-            </div> -->
             <div class='row'>
                 <div class='col-md-12'>
                     <h2>My Restaurant List</h2>
                     <ul class="listnoStyle">
-                        <li ng-repeat="place in vm.saved_restaurants">
+                        <li class = "list-group-item" ng-repeat="place in vm.saved_restaurants">
                             {{place.name}}
                         </li>
                     </ul>
-                    <!-- <h2> Sort My Restaurant List </h2>
-                    <input type='text' ng-model='vm.sort_by' placeholder="Restaurant Name"> -->
+                     <h2> Sort My Restaurant List </h2>
+                    <input type='text' ng-model='vm.sort_by' placeholder="Restaurant Name">
                 </div>
             </div>
     </form>
