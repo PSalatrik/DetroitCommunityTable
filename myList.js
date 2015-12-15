@@ -22,7 +22,6 @@ app.controller('myListController', ['$scope', '$http', 'yelpApi', function($scop
         });
     };
 
-
 }]);
 
 app.directive('typedir', function($timeout) {

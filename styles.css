@@ -170,7 +170,7 @@ footer {
     text-decoration: highlight;
 }
 .active{
-    color: #FF9E0A;
+    background-color: #FF9E0A;
 }
 
 #status {

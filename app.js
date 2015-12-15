@@ -2,7 +2,7 @@
 var app = angular.module('dcTable', ['ngRoute']);
 
 app.config(function($routeProvider) {
-    $routeProvider.when('/areas/:area', {
+    $routeProvider.when('/areas/:neighborhood', {
         controller: 'displayRestaurantsController',
         templateUrl: 'areaRestaurants.html'
     })
