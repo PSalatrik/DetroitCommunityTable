@@ -11,7 +11,7 @@ app.controller('displayRestaurantsController', ['$scope', 'yelpApi', '$routePara
     $scope.vm.area_name = area_map[$routeParams.neighborhood];//tells area_name to be the value of the key .area (i.e. corktown, downtown, midtown, estmkt)
     $scope.vm.area_display = $scope.vm.area_name + ' Restaurants';//ng-bind header
     $scope.vm.restaurants = [];//declares empty, look to line 21-22
-
+    $scope.vm.header = $routeParams.neighborhood + " Restaurants";
 
     yelpApi.retrieveYelp($scope.vm.area_name, function(data) {
         $scope.vm.restaurants = data.businesses;//fills in with api response
@@ -21,9 +21,11 @@ app.controller('displayRestaurantsController', ['$scope', 'yelpApi', '$routePara
    //setter
    $scope.vm.select = function(areaRestaurantsClicked) {
         $http.post('/api/restaurants/add', {
-            restaurant: areaRestaurantsClicked.name
+            restaurant: areaRestaurantsClicked.name,
+            stars: areaRestaurantsClicked.rating
         }).success(function(data) {
             $scope.vm.name = "";
+            $scope.vm.stars = "";
             $scope.vm.saved_restaurants = data;
             
         });

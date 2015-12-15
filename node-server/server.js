@@ -45,7 +45,7 @@ app.post('/api/restaurants/add', function(req, res) {
     var neverland = storage.getItem('neverland') || [];
     //function pushes new clickedRestaurant into neverland
     neverland.push({
-        // id: crypto.randomBytes(20).toString('hex'),
+        rating: req.body.stars,
         name: req.body.restaurant
     });
     //updating(kind of overwriting) JSON file to include 
