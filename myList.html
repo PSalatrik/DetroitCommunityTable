@@ -13,17 +13,19 @@
                 </div>
             </div>
 
-            <div class='row'>
-                <div class='col-md-12'>
+
+            <div class='col-md-12'>
                     <h2 class= "cursivefont">My Restaurant List</h2>
                     <ul class="listnoStyle">
                         <li class = "list-group-item" ng-repeat="place in vm.saved_restaurants">
-                            {{place.name}}
+                           <p> {{place.name}} </p>
+                           <p>Rating: {{place.rating}} stars</p>
                         </li>
                     </ul>
+
                     <!-- <h2> Sort My Restaurant List </h2>
                     <input type='text' ng-model='vm.sort_by' placeholder="Restaurant Name"> -->
-                </div>
             </div>
+        </div>
     </form>
-    </div>
+</div>
