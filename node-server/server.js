@@ -4,7 +4,7 @@ var path = require('path'),
     app = express(),
     http = require('http'),
     yelp = require('./yelp'),
-    crypto = require('crypto'),
+    // crypto = require('crypto'),
     bodyParser = require('body-parser'),
     storage = require('node-persist'),
     http_port = process.env.HTTP_PORT || 8080,
@@ -39,13 +39,17 @@ app.get('/api/yelp/search', function(req, res) {
         });
 });
 
-//maps to the add functionality so we can give
+//maps to $http.post in displayRestaurantsCont
 app.post('/api/restaurants/add', function(req, res) {
+    //function grabs the JSON (aka neverland)
     var neverland = storage.getItem('neverland') || [];
+    //function pushes new clickedRestaurant into neverland
     neverland.push({
         // id: crypto.randomBytes(20).toString('hex'),
         name: req.body.restaurant
     });
+    //updating(kind of overwriting) JSON file to include 
+    //things you have clicked
     storage.setItem('neverland', neverland);
     res.send(neverland);
 });
