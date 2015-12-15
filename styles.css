@@ -108,7 +108,6 @@ h2{
 	width:100%;
 }
 
-
 #neighborhoodZones {
 	background-color: #E46A73;
 	font-family: 'Oswald', serif;
@@ -191,7 +190,7 @@ footer {
     background-color: #FF9E0A;
 }
 
-#apiNeighborhood::first-letter { 
+#apiNeighborhood::first-letter {
     text-transform: uppercase;
 }
 
