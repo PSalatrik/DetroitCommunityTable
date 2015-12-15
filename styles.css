@@ -191,6 +191,11 @@ footer {
     background-color: #FF9E0A;
 }
 
+#apiNeighborhood::first-letter { 
+    text-transform: uppercase;
+}
+
+
 #status {
 	font-size: 14px;
 }
