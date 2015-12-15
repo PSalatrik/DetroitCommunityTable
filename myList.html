@@ -2,10 +2,9 @@
     <form>
         <div class="container-fluid bodyStyle">
             <div class="row">
-                <h2> Search for a Restaurant </h2>
+                <h2 class= "cursivefont"> Search for a Restaurant </h2>
                 <div class='col-md-12'>
                     <div class="form-group">
-                        <label> Restaurant </label>
                         <typedir arr="arr" items="vm.items" prompt="Find a restaurant!" title="name" subtitle="abbreviation" model="vm.name" on-select="vm.selectItem"></typedir>
                         <div ng-repeat="eatery in arr">
                             {{eatery}}
@@ -14,18 +13,19 @@
                 </div>
             </div>
 
-            <div class='row'>
-                <div class='col-md-12'>
-                    <h2>My Restaurant List</h2>
+
+            <div class='col-md-12'>
+                    <h2 class= "cursivefont">My Restaurant List</h2>
                     <ul class="listnoStyle">
                         <li class = "list-group-item" ng-repeat="place in vm.saved_restaurants">
                            <p> {{place.name}} </p>
                            <p>Rating: {{place.rating}} stars</p>
                         </li>
                     </ul>
-                     <h2> Sort My Restaurant List </h2>
-                    <input type='text' ng-model='vm.sort_by' placeholder="Restaurant Name">
-                </div>
+
+                    <!-- <h2> Sort My Restaurant List </h2>
+                    <input type='text' ng-model='vm.sort_by' placeholder="Restaurant Name"> -->
             </div>
+        </div>
     </form>
-    </div>
+</div>

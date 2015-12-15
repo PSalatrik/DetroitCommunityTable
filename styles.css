@@ -11,6 +11,20 @@
 	overflow: visible;
 }
 
+.list-group-item {
+	font-family: Oswald;
+}
+
+.form-control {
+padding-right: 10px;
+}
+
+.cursivefont {
+	font-family: Pacifico;
+	font-size: 20px;
+}
+
+
 
  .dropdown:hover .dropdown-menu {
     display: block;
@@ -108,7 +122,7 @@ h2{
 	text-align: justify;
 	padding-bottom: 25px;
 	padding-top: 18px;
-	
+
 }
 
 .highlightText {
@@ -186,9 +200,17 @@ p {
 	padding-right: 10px
 }
 
+input {
+	padding-right: 10px;
+}
+
 img {
 	border-radius: 50%;
 	overflow: hidden;
 	border: solid;
 	border-color: #786E5D
+}
+
+h2{
+	text-align: center;
 }
