@@ -15,6 +15,10 @@
 	font-family: Oswald;
 }
 
+.list-group-item:hover {
+	background-color: #FEE28D;
+}
+
 .form-control {
 padding-right: 10px;
 }
@@ -97,13 +101,12 @@ h1{
 }
 
 h2{
-	font-size: 16px;
+	font-size: 18px;
 }
 
 #imageHead img {
 	width:100%;
 }
-
 
 #neighborhoodZones {
 	background-color: #E46A73;
@@ -187,7 +190,7 @@ footer {
     background-color: #FF9E0A;
 }
 
-#apiNeighborhood::first-letter { 
+#apiNeighborhood::first-letter {
     text-transform: uppercase;
 }
 

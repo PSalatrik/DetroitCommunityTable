@@ -1,5 +1,5 @@
 <div id="area_title">
-    <h2 id="apiNeighborhood" ng-bind='vm.header'></h2>
+    <h2 ng-bind='vm.area_display'></h2>
 </div>
 <div>
     <ul class="listnoStyle">
@@ -8,6 +8,7 @@
                 <a ng-href="{{restaurant.url}}"> {{restaurant.name}} </a>
                 <p> Rating: {{restaurant.rating}}</p>
                 <p> Address: {{restaurant.location.address[0]}}</p>
+                <button> + </button> 
             </div>
         </li>
     </ul>
