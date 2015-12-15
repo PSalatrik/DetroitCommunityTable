@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 @import url(https://fonts.googleapis.com/css?family=Ultra);
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
-
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
 
 
@@ -16,11 +16,11 @@
     display: block;
     margin-top: 0;
     margin-bottom: 0;
-    background-color: #C3FCFE;
+    background-color: #A0C4CF;
  }
 
  .dropdown-menu {
- 	background-color: #C3FCFE;
+ 	background-color: #A0C4CF;
  }
 
  .navbar .navbar-nav{
@@ -38,7 +38,7 @@
  }
 
  .navbar-default {
-	background-color: #C3FCFE;
+	background-color: #A0C4CF;
 	opacity: 60%;
 	border: none;
 	margin-bottom: 0px;
@@ -60,7 +60,7 @@
 
 
  #imageHead {
- 	font-family: 'Pacifico', cursive;';
+ 	font-family: 'Pacifico', cursive;
  	width:100%;
  	background: url(img/beirgarten.jpg) no-repeat center center fixed;
  	background-size: cover;
@@ -102,7 +102,7 @@ h2{
 }
 
 #aboutUs {
-	background-color: #C3FCFE;
+	background-color: #A0C4CF;
 	font-family: 'Playfair Display', serif;
 	color: #786E5D;
 	text-align: justify;
