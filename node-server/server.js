@@ -46,7 +46,8 @@ app.post('/api/restaurants/add', function(req, res) {
     //function pushes new clickedRestaurant into neverland
     neverland.push({
         rating: req.body.stars,
-        name: req.body.restaurant
+        name: req.body.restaurant,
+        phone: req.body.phone
     });
     //updating(kind of overwriting) JSON file to include 
     //things you have clicked
