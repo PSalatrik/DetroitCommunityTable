@@ -30,6 +30,7 @@ padding-right: 10px;
 .cursivefont {
 	font-family: Pacifico;
 	font-size: 20px;
+	color: #FEE28D;
 }
 
  .dropdown:hover .dropdown-menu {
@@ -244,6 +245,8 @@ h2{
   background-color: #A0C4CF;
   border-color: #A0C4CF;
   color: white;
+  display: block;
+  float: right;
 }
 
 .btn-circle:hover {
@@ -263,14 +266,12 @@ h2{
    border: none; 
    background-color: #A0C4CF;
    color: #786E5D;
-
 }
 
 .btn-circle:active {
    border: none; 
    background-color: #A0C4CF;
    color: #786E5D;
-
 }
 
 .restaurantLi {
@@ -278,9 +279,21 @@ h2{
 }
 
 #apiNeighborhood {
-	color: #786E5D;
+	color: #FEE28D;
+	margin-top: 0px;
+	padding-top: 20px;
+	padding-bottom: 10px;
 }
+
 .pageBackground {
 	background-color: #786E5D;
 	padding-top: 0px;
 }
+
+
+.listpageBackground {
+	background-color: #786E5D;
+	padding-top: 0px;
+	height: 100%
+}
+
