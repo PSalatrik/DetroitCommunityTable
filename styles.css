@@ -6,10 +6,13 @@
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
 
-
-
 .list-group-item {
 	font-family: Oswald;
+	color: #786E5D;
+}
+
+.list-group-item a {
+	color: #786E5D;
 }
 
 .list-group-item:hover {
@@ -28,7 +31,6 @@ padding-right: 10px;
 	font-family: Pacifico;
 	font-size: 20px;
 }
-
 
  .dropdown:hover .dropdown-menu {
     display: block;
@@ -52,7 +54,6 @@ padding-right: 10px;
  	text-align: center;
  	padding-left: 0px;
  	padding-right: 0px;
- 	overflow: hidden;
  }
 
  .navbar-default {
@@ -114,7 +115,7 @@ h2{
 	color: #FEE28D;
 	text-align: center;
 	font-size: 14px;
-	padding-bottom: 20px;
+	padding-bottom: 19px;
 	padding-top: 10px;
 }
 
@@ -123,9 +124,8 @@ h2{
 	font-family: 'Playfair Display', serif;
 	color: #786E5D;
 	text-align: justify;
-	padding-bottom: 69px;
-	padding-top: 18px;
 	font-style: 18px;
+	font-size: 16px;
 }
 
 #aboutUs a {
@@ -158,7 +158,7 @@ h2{
  }
 
 footer {
-	 height: 50px;
+	
 	 background-color: #FEE28D;
 	 padding-left: 20px;
 	 padding-right: 20px;
@@ -184,10 +184,14 @@ footer {
 	list-style-type: none;
 }
 
-.bodyStyle{
+ul {
+	padding-left: 0px;
+}
+
+/*.bodyStyle{
 	padding-left: 40px;
 	padding-right: 20px;
-}
+}*/
 
 .paginationclass div{
     cursor: pointer;
@@ -227,3 +231,56 @@ h2{
 	font-size: 2em;
 }
 
+
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+  background-color: #A0C4CF;
+  border-color: #A0C4CF;
+  color: white;
+}
+
+.btn-circle:hover {
+	background-color: #A0C4CF;
+    border-color: #A0C4CF;
+    color: white;
+}
+
+
+.btn-circle:focus {
+	outline: none !important;
+	background-color: #A0C4CF;
+	color: #786E5D;
+}
+
+.btn-circle:active {
+   border: none; 
+   background-color: #A0C4CF;
+   color: #786E5D;
+
+}
+
+.btn-circle:active {
+   border: none; 
+   background-color: #A0C4CF;
+   color: #786E5D;
+
+}
+
+.restaurantLi {
+	font-family: 'Playfair Display';
+}
+
+#apiNeighborhood {
+	color: #786E5D;
+}
+.pageBackground {
+	background-color: #786E5D;
+	padding-top: 0px;
+}
