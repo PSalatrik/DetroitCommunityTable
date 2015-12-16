@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="area_title">
     <h2 id='apiNeighborhood' ng-bind='vm.header'></h2>
 </div>
@@ -18,16 +19,28 @@
 <div>
 
 <img src = "img/detroit.jpg" alt="" title="" />
+=======
+<div class="pageBackground">
+    <div id="area_title">
+        <h2 id='apiNeighborhood' ng-bind='vm.header'></h2>
+    </div>
+>>>>>>> eb2b2f985a0150c0c42c154fbc4743c204df30bc
 
-</div>
-<!-- <div class='row'>
-    <div class='col-md-12'>
-        <h2>My Restaurant List</h2>
-        <ul class="listnoStyle">
-            {{place.name}}
-        </ul>
-        <h2> Sort My Restaurant List </h2>
-                    <input type='text' ng-model='vm.sort_by' placeholder="Restaurant Name">
+    <div class="container-fluid">
+        <div class="row">
+            <div class='col-sm-12 col-md-12'>
+                <ul class="listnoStyle">
+                    <li class="paginationclass" ng-repeat='restaurant in vm.restaurants | orderBy: "name"' ng-click='vm.select(restaurant)' ng-class='{active: vm.isActive(restaurant)}'>
+                        <div class="list-group-item">
+                            <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-ok"></i></button>
+                            <a ng-href="{{restaurant.url}}"> {{restaurant.name}} </a>
+                            <p class="restaurantLi"> Rating: {{restaurant.rating}}</p>
+                            <p class="restaurantLi"> Address: {{restaurant.location.address[0]}}</p>
+                            <p class="restaurantLi"> Phone: {{restaurant.phone}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
- -->

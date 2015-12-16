@@ -15,7 +15,7 @@ app.controller('displayRestaurantsController', ['$scope', 'yelpApi', '$routePara
 
     yelpApi.retrieveYelp($scope.vm.area_name, function(data) {
         $scope.vm.restaurants = data.businesses;//fills in with api response
-    
+
     });
 
    //setter
@@ -28,10 +28,10 @@ app.controller('displayRestaurantsController', ['$scope', 'yelpApi', '$routePara
             $scope.vm.name = "";
             $scope.vm.stars = "";
             $scope.vm.saved_restaurants = data;
-            
+
         });
     };
-   
+
    //getter
     $http.get('/api/restaurants/saved')
         .success(function(returnObjectsinNeverland) {
@@ -46,5 +46,3 @@ app.controller('displayRestaurantsController', ['$scope', 'yelpApi', '$routePara
     };
 
 }]);
-
-
