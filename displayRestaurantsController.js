@@ -5,13 +5,17 @@ app.controller('displayRestaurantsController', ['$scope', 'yelpApi', '$routePara
         'downtown': 'Detroit, 48226',
         'midtown': 'Detroit, Midtown',
         'corktown': 'Detroit, Corktown',
-        'estmkt': 'Detroit, Eastern Market'
+        'easternMarket': 'Detroit, Eastern Market'
     };
     $scope.vm = {};//empty object that all things below go into
     $scope.vm.area_name = area_map[$routeParams.neighborhood];//tells area_name to be the value of the key .area (i.e. corktown, downtown, midtown, estmkt)
     $scope.vm.area_display = $scope.vm.area_name + ' Restaurants';//ng-bind header
     $scope.vm.restaurants = [];//declares empty, look to line 21-22
     $scope.vm.header = $routeParams.neighborhood + " Restaurants";
+    
+    console.log($routeParams);
+    console.log($routeParams.neighborhood);
+    console.log($scope.vm.area_name);
 
     yelpApi.retrieveYelp($scope.vm.area_name, function(data) {
         $scope.vm.restaurants = data.businesses;//fills in with api response
