@@ -8,7 +8,7 @@
                 <ul class="listnoStyle">
                     <li class="paginationclass" ng-repeat='restaurant in vm.restaurants track by $index | orderBy: "name"' ng-click='vm.select(restaurant)' ng-class='{active: vm.isActive(restaurant)}'>
                         <div class="list-group-item">
-                            <button type="button" class="btn btn-default btn-circle" ng-class="{'active': restaurant.active}" ng-click="activeButton($index)"><i class="glyphicon glyphicon-ok"></i></button>
+                            <button type="button" class="btn btn-default btn-circle clickedButton" ng-class="{'active': restaurant.active}" ng-click="activeButton($index)"><i class="glyphicon glyphicon-ok"></i></button>
                             <a ng-href="{{restaurant.url}}"> {{restaurant.name}} </a>
                             <p class="restaurantLi"> Rating: {{restaurant.rating}}</p>
                             <p class="restaurantLi"> Address: {{restaurant.location.address[0]}}</p>
