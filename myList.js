@@ -11,14 +11,19 @@ app.controller('myListController', ['$scope', '$http', 'yelpApi', function($scop
     $http.get('/api/restaurants/saved')
      .success(function(items) {
          $scope.vm.saved_restaurants = items;
+
      });
 
-    $scope.vm.selectItem = function(item) {
+    $scope.vm.selectItem = function(item, phoner, rate) {
         $http.post('/api/restaurants/add', {
-            restaurant: item
+            restaurant: item,
+            stars: rate,
+            phone: phoner
         }).success(function(data) {
             $scope.vm.name = "";
+            $scope.vm.phone = "";
             $scope.vm.saved_restaurants = data;
+              
         });
     };
 
@@ -33,16 +38,19 @@ app.directive('typedir', function($timeout) {
             prompt: '@',
             title: '@',
             subtitle: '@',
+            star: '@',
             model: '=',
             onSelect: '&'
         },
         link: function(scope, elem, attrs) {
-            scope.handleSelection = function(selectedItem) {
+            scope.handleSelection = function(selectedItem, otherItem, pItem) {
                 scope.model = selectedItem;
+                scope.subtitle = otherItem;
+                scope.phoney = pItem;
                 scope.current = 0;
                 scope.selected = true;
                 scope.current = selectedItem;
-                scope.onSelect()(selectedItem);
+                scope.onSelect()(selectedItem, otherItem, pItem);
             };
             scope.current = 0;
             scope.selected = true;

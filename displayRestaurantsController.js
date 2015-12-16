@@ -22,7 +22,8 @@ app.controller('displayRestaurantsController', ['$scope', 'yelpApi', '$routePara
    $scope.vm.select = function(areaRestaurantsClicked) {
         $http.post('/api/restaurants/add', {
             restaurant: areaRestaurantsClicked.name,
-            stars: areaRestaurantsClicked.rating
+            stars: areaRestaurantsClicked.rating,
+            phone: areaRestaurantsClicked.phone
         }).success(function(data) {
             $scope.vm.name = "";
             $scope.vm.stars = "";

@@ -8,6 +8,7 @@
                 <a ng-href="{{restaurant.url}}"> {{restaurant.name}} </a>
                 <p> Rating: {{restaurant.rating}}</p>
                 <p> Address: {{restaurant.location.address[0]}}</p>
+                <p ng-show="restaurant.phone">Phone: {{restaurant.phone | tel}}</p>
                 <button> + </button> 
             </div>
         </li>

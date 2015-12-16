@@ -5,10 +5,10 @@
                 <h2 class= "cursivefont"> Search for a Restaurant </h2>
                 <div class='col-md-12'>
                     <div class="form-group">
-                        <typedir arr="arr" items="vm.items" prompt="Find a restaurant!" title="name" subtitle="abbreviation" model="vm.name" on-select="vm.selectItem"></typedir>
-                        <div ng-repeat="eatery in arr">
+                        <typedir arr="arr" items="vm.items" prompt="Find a restaurant!" title="name" star="rating" subtitle="phone" model="vm.name" on-select="vm.selectItem"></typedir>
+                        <!-- <div ng-repeat="eatery in arr">
                             {{eatery}}
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -20,6 +20,7 @@
                         <li class = "list-group-item" ng-repeat="place in vm.saved_restaurants">
                            <p> {{place.name}} </p>
                            <p>Rating: {{place.rating}} stars</p>
+                           <p ng-show="place.phone">Phone: {{place.phone | tel}}</p>
                         </li>
                     </ul>
 
