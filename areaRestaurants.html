@@ -1,4 +1,5 @@
 <div id="area_title">
+
     <h2 id='apiNeighborhood' ng-bind='vm.header'></h2>
 </div>
 <div>
@@ -6,9 +7,10 @@
         <li class="paginationclass" ng-repeat='restaurant in vm.restaurants | orderBy: "name"' ng-click='vm.select(restaurant)' ng-class='{active: vm.isActive(restaurant)}'>
             <div class="list-group-item">
                 <a ng-href="{{restaurant.url}}"> {{restaurant.name}} </a>
+                <button class = "btn-large"> + </button>
                 <p> Rating: {{restaurant.rating}}</p>
                 <p> Address: {{restaurant.location.address[0]}}</p>
-                <button> + </button> 
+
 
             </div>
         </li>

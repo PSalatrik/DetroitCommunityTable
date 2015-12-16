@@ -108,6 +108,11 @@ h2{
 	width:100%;
 }
 
+button {
+	display: block;
+	float: right;
+}
+
 #neighborhoodZones {
 	background-color: #E46A73;
 	font-family: 'Oswald', serif;
