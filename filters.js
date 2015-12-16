@@ -44,3 +44,12 @@ app.filter('tel', function () {
         return (country + " (" + city + ") " + number).trim();
     };
 });
+
+$(document).ready(function(){
+
+  $("button").click(function(){
+      $(this).toggleClass("disabled");
+
+    });
+
+});

@@ -23,7 +23,7 @@ app.controller('displayRestaurantsController', ['$scope', 'yelpApi', '$routePara
         $http.post('/api/restaurants/add', {
             restaurant: areaRestaurantsClicked.name,
             stars: areaRestaurantsClicked.rating,
-            phone: areaRestaurantsClicked.phone
+            phone: areaRestaurantsClicked.phone,
         }).success(function(data) {
             $scope.vm.name = "";
             $scope.vm.stars = "";
@@ -36,13 +36,13 @@ app.controller('displayRestaurantsController', ['$scope', 'yelpApi', '$routePara
     $http.get('/api/restaurants/saved')
         .success(function(returnObjectsinNeverland) {
             $scope.vm.saved_restaurants = returnObjectsinNeverland;
-            console.log($scope.vm.saved_restaurants);
         });
 
 
+      $scope.ButtonisActive = false;
+      $scope.activeButton = function(index) {
+      $scope.vm.restaurants[index].active = true;
+      }
 
-    $scope.vm.isActive = function(item) {
-        return $scope.selected === item;
-    };
 
 }]);
