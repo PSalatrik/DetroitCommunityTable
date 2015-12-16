@@ -120,9 +120,14 @@ h2{
 	width:100%;
 }
 
-button {
+.clickedButton {
 	display: block;
 	float: right;
+}
+
+#modalimage {
+	height: 449px;
+	width: 797px;
 }
 
 #neighborhoodZones {
