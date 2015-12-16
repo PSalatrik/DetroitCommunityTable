@@ -110,6 +110,11 @@ h2{
 	width:100%;
 }
 
+button {
+	display: block;
+	float: right;
+}
+
 #neighborhoodZones {
 	background-color: #E46A73;
 	font-family: 'Oswald', serif;
@@ -159,7 +164,7 @@ h2{
  }
 
 footer {
-	
+
 	 background-color: #FEE28D;
 	 padding-left: 20px;
 	 padding-right: 20px;
@@ -263,13 +268,13 @@ h2{
 }
 
 .btn-circle:active {
-   border: none; 
+   border: none;
    background-color: #A0C4CF;
    color: #786E5D;
 }
 
 .btn-circle:active {
-   border: none; 
+   border: none;
    background-color: #A0C4CF;
    color: #786E5D;
 }
@@ -296,4 +301,3 @@ h2{
 	padding-top: 0px;
 	height: 100%
 }
-
