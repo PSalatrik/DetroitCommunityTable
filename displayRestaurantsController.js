@@ -44,4 +44,6 @@ app.controller('displayRestaurantsController', ['$scope', 'yelpApi', '$routePara
         return $scope.selected === item;
     };
 
+
+
 }]);

@@ -114,6 +114,14 @@ button {
 	float: right;
 }
 
+.red{
+        color:red;
+      }
+
+.blue{
+color:blue;
+      }
+
 #neighborhoodZones {
 	background-color: #E46A73;
 	font-family: 'Oswald', serif;
