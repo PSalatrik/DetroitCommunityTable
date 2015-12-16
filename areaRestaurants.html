@@ -2,20 +2,34 @@
 
     <h2 id='apiNeighborhood' ng-bind='vm.header'></h2>
 </div>
+<<<<<<< HEAD
 <div>
     <ul class="listnoStyle">
         <li class="paginationclass" ng-repeat='restaurant in vm.restaurants | orderBy: "name"' ng-click='vm.select(restaurant)' ng-class='{active: vm.isActive(restaurant)}'>
             <div class="list-group-item">
                 <a ng-href="{{restaurant.url}}"> {{restaurant.name}} </a>
-                <button class = "btn-large"> + </button>
                 <p> Rating: {{restaurant.rating}}</p>
                 <p> Address: {{restaurant.location.address[0]}}</p>
 
-
-            </div>
-        </li>
-    </ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class='col-sm-12 col-md-12'>
+            <ul class="listnoStyle">
+                <li class="paginationclass" ng-repeat='restaurant in vm.restaurants | orderBy: "name"' ng-click='vm.select(restaurant)' ng-class='{active: vm.isActive(restaurant)}'>
+                    <div class="list-group-item">
+                        <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-ok"></i></button>
+                        <a ng-href="{{restaurant.url}}"> {{restaurant.name}} </a>
+                        <p class="restaurantLi"> Rating: {{restaurant.rating}}</p>
+                        <p class="restaurantLi"> Address: {{restaurant.location.address[0]}}</p>
+                        <p class="restaurantLi"> Phone: {{restaurant.phone}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
+</div>
+
 <!-- <div class='row'>
     <div class='col-md-12'>
         <h2>My Restaurant List</h2>
