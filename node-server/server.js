@@ -24,11 +24,11 @@ app.get('/api/', function(req, res) {
     res.sendFile(path.resolve(__dirname + '/../index.html'));
 });
 
-//maps to the contents of our retrieveYelp function, returns the 
+//maps to the contents of our retrieveYelp function, returns the
 //search terms to be delivered by the api service all over the app
 app.get('/api/yelp/search', function(req, res) {
     return yelp.search({
-            term: 'Bars',
+            term: 'Restaurants',
             location: req.query.location
         })
         .then(function(data) {
@@ -47,9 +47,9 @@ app.post('/api/restaurants/add', function(req, res) {
     neverland.push({
         rating: req.body.stars,
         name: req.body.restaurant,
-        phone: req.body.phone
+        phone: req.body.phone,
     });
-    //updating(kind of overwriting) JSON file to include 
+    //updating(kind of overwriting) JSON file to include
     //things you have clicked
     storage.setItem('neverland', neverland);
     res.send(neverland);

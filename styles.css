@@ -15,6 +15,15 @@
 	color: #786E5D;
 }
 
+/*.active {
+  background: #FF735C;
+}*/
+
+.disabled {
+  background: #eee;
+  color: #aaa;
+}
+
 .list-group-item:hover {
 	background-color: #FEE28D;
 }
@@ -204,7 +213,7 @@ ul {
     text-decoration: highlight;
 }
 .active{
-    background-color: #FF9E0A;
+    background-color: pink;
 }
 
 #apiNeighborhood::first-letter {
@@ -267,17 +276,6 @@ h2{
 	color: #786E5D;
 }
 
-.btn-circle:active {
-   border: none;
-   background-color: #A0C4CF;
-   color: #786E5D;
-}
-
-.btn-circle:active {
-   border: none;
-   background-color: #A0C4CF;
-   color: #786E5D;
-}
 
 .restaurantLi {
 	font-family: 'Playfair Display';
