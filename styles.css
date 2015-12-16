@@ -39,18 +39,18 @@ padding-right: 10px;
 .cursivefont {
 	font-family: Pacifico;
 	font-size: 20px;
-	color: #FEE28D;
+	color: #786E5D;
 }
 
  .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
     margin-bottom: 0;
-    background-color: #A0C4CF;
+    background-color: #C3FCFE;
  }
 
  .dropdown-menu {
- 	background-color: #A0C4CF;
+ 	background-color: #C3FCFE;
  }
 
  .navbar .navbar-nav{
@@ -64,10 +64,11 @@ padding-right: 10px;
  	text-align: center;
  	padding-left: 0px;
  	padding-right: 0px;
+ 	overflow: visible;
  }
 
  .navbar-default {
-	background-color: #A0C4CF;
+	background-color: #C3FCFE;
 	opacity: 60%;
 	border: none;
 	margin-bottom: 0px;
@@ -135,12 +136,13 @@ button {
 }
 
 #aboutUs {
-	background-color: #A0C4CF;
+	background-color: #C3FCFE;
 	font-family: 'Playfair Display', serif;
 	color: #786E5D;
 	text-align: justify;
 	font-style: 18px;
 	font-size: 16px;
+	padding-top: 20px;
 }
 
 #aboutUs a {
@@ -213,7 +215,7 @@ ul {
     text-decoration: highlight;
 }
 .active {
-    background-color: #A0C4CF;
+    background-color: #C3FCFE;
     background-color: pink;
 
 }
@@ -258,25 +260,26 @@ h2{
   font-size: 12px;
   line-height: 1.428571429;
   border-radius: 15px;
-  background-color: #A0C4CF;
-  border-color: #A0C4CF;
+  background-color: #786E5D;
+  border-color: #786E5D;
   color: white;
   display: block;
   float: right;
 }
 
 .btn-circle:hover {
-	background-color: #A0C4CF;
-    border-color: #A0C4CF;
+	background-color: #786E5D;
+    border-color: #786E5D;
     color: white;
 }
 
 
 .btn-circle:focus {
 	outline: none !important;
-	background-color: #A0C4CF;
-	color: #786E5D;
 }
+
+
+
 
 
 .restaurantLi {
@@ -295,13 +298,10 @@ h2{
 	padding-top: 0px;
 }
 
-
 .listpageBackground {
-	background-color: #786E5D;
 	padding-top: 0px;
 	height: 100%
 }
-
 
 .items {
 	border-left: 2px solid white;
@@ -321,5 +321,6 @@ h2{
 	text-align: center;
 }
 
-
-
+.rowColor {
+	background-color: #C3FCFE;
+}
