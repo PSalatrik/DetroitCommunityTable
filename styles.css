@@ -333,13 +333,13 @@ ul {
 /*list search*/
 
 .active {
-    background-color: #C3FCFE;
-    background-color: pink;
+	background-color: #BFB5A3;
 
 }
 
 
 .items {
+	text-align: center;
 	border-left: 2px solid white;
 	border-right: 2px solid white;
 	border-bottom: 2px solid white;
@@ -347,7 +347,6 @@ ul {
 	position: fixed;
 	z-index: 20;
 	background-color: #FEE28D;
-	margin-left: 20%;
 	font-family: 'Playfair Display';
 	font-weight: bold;
 }
@@ -357,11 +356,16 @@ ul {
 	text-align: center;
 }
 
-<<<<<<< HEAD
+#or {
+	font-family: Pacifico;
+	color: #786E5D;
+}
+
+
 /*begin bootstrap scrollable*/
 
 .scrollable-menu {
-    height: auto;
+    height: 200px;
     max-height: 200px;
     overflow-x: hidden;
 }
@@ -414,8 +418,8 @@ ul {
 	border-right: 5px solid #FEE28D;
 	border-left: 5px solid #FEE28D;
 }
-=======
+
 .rowColor {
 	background-color: #C3FCFE;
 }
->>>>>>> 963bbf47671a5fe3853581803fa0a5b1b7322240
+

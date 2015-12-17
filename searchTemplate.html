@@ -1,18 +1,33 @@
-<!-- <div class ="row">
+<div class ="row">
 	<div class="col-md-4"></div>
 	<div class="col-md-4">
-<input class="form-control" type="text" ng-model="model" placeholder="{{prompt}}" ng-keydown="selected=false"/>
-</div>
-<div class= "col-md-4"></div>
+        <input class="form-control" type="text" ng-model="model" placeholder="{{prompt}}" ng-keydown="selected=false"/>
+    </div>
+    <div class= "col-md-4"></div>
 </div>
 
-<div class="items" ng-hide="!model.length || selected">
-	<div class="directive" ng-repeat="item in items | filter:model track by $index" ng-click="handleSelection(item[title], item[subtitle], item[star])" style="cursor:pointer" ng-class="{active:isCurrent($index)}" ng-mouseenter="setCurrent($index)">
-		<p class="directiveItems" id="title">{{item[title]}}</p>
-		<p class="directiveItems" id="subtitle">{{item[subtitle] | tel}}</p>
-		<p class="directiveItems" id="star">Rating: {{item[star]}}</p>
-	</div>
-</div> -->
+<div class="container text-center">
+   <div class="row">
+        <div class= "col-md-4"></div>
+        <div class="col-md-4">
+            <div class="items pagination-centered" ng-hide="!model.length || selected">
+                <div class="directive " ng-repeat="item in items | filter:model track by $index" ng-click="handleSelection(item[title], item[subtitle], item[star])" style="cursor:pointer" ng-class="{active:isCurrent($index)}" ng-mouseenter="setCurrent($index)">
+                   <p class="directiveItems" id="title">{{item[title]}}</p>
+                   <p class="directiveItems" id="subtitle">{{item[subtitle] | tel}}</p>
+                   <p class="directiveItems" id="star">Rating: {{item[star]}}</p>
+               </div>
+           </div>
+        </div>
+        <div class= "col-md-4"></div>
+   </div> 
+</div>
+
+
+
+
+<h2 id="or" class="text-center"> - or - </h2>
+
+
 
 
 
@@ -20,7 +35,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle dropper pagination-centered" data-toggle="dropdown">Browse Suggestions</button>
+                <button type="button" class="btn btn-default dropdown-toggle dropper pagination-centered" data-toggle="dropdown">Browse Restaurant Suggestions</button>
                 <ul class="dropdown-menu scrollable-menu drpDwn" role="menu">
                     <li ng-click="handleSelection(item[title], item[subtitle], item[star])" style="cursor:pointer" class="hoveration" ng-repeat="item in items">
                         <span>{{item[title]}}</span>
