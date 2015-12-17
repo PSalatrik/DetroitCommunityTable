@@ -1,56 +1,42 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
-@import url(https://fonts.googleapis.com/css?family=Vast+Shadow);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 @import url(https://fonts.googleapis.com/css?family=Ultra);
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
-@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
 
-.list-group-item {
-	font-family: Oswald;
-	color: #786E5D;
-}
 
-.list-group-item a {
-	color: #786E5D;
-}
 
 /*.active {
   background: #FF735C;
 }*/
 
-.disabled {
+/*.disabled {
   background: #eee;
   color: #aaa;
-}
-
-.list-group-item:hover {
-	background-color: #FEE28D;
-}
-
-.form-control {
-padding-right: 10px;
-}
-
-.form-group {
-	padding-left: 0px;
-}
-
-.cursivefont {
+}*/
+h2{
+	text-align: center;
 	font-family: Pacifico;
-	font-size: 20px;
-	color: #FEE28D;
+	font-size: 2em;
+	padding-bottom: 10px
 }
 
+p {
+	padding-left: 10px;
+	padding-right: 10px
+}
+
+
+/*homepage navigation*/
  .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
     margin-bottom: 0;
-    background-color: #A0C4CF;
+    background-color: #C3FCFE;
  }
 
  .dropdown-menu {
- 	background-color: #A0C4CF;
+ 	background-color: #C3FCFE;
  }
 
  .navbar .navbar-nav{
@@ -64,22 +50,23 @@ padding-right: 10px;
  	text-align: center;
  	padding-left: 0px;
  	padding-right: 0px;
+ 	overflow:;
  }
 
  .navbar-default {
-	background-color: #A0C4CF;
+	background-color: #C3FCFE;
 	opacity: 60%;
 	border: none;
 	margin-bottom: 0px;
 }
 
 .navbar-default .navbar-nav li a {
-	color: white;
 	font-size: 14px;
 }
 
 .navbar-default .navbar-nav li a:hover {
 	color: #786E5D;
+	background-color: #C3FCFE;
 	font-size: 16px;
 }
 
@@ -87,7 +74,18 @@ padding-right: 10px;
 	color: #786E5D;
 }
 
+/*facebook status*/
 
+#status {
+	font-size: 14px;
+}
+
+/*#btnLogin {
+	color: white;
+	background-color: #7B7A7A;
+}*/
+
+/*homepage image and header*/
  #imageHead {
  	font-family: 'Pacifico', cursive;
  	width:100%;
@@ -106,29 +104,37 @@ padding-right: 10px;
   padding-bottom: 30px;
 }
 
-h1{
-	color: #E46A73;
-	font-size: 42px;
-}
-
-h2{
-	font-size: 18px;
-}
-
 #imageHead img {
 	width:100%;
 }
 
-.clickedButton {
-	display: block;
-	float: right;
-}
+/*popup modal*/
 
-#modalimage {
+/*#modalimage {
 	height: 449px;
 	width: 797px;
+}*/
+
+
+.btn {
+	font: #786E5D;
+	background-color: #FEE28D;
+	outline: none;
 }
 
+
+.btn-secondary  {
+	font: #786E5D;
+	background-color: #FEE28D;
+	outline: none !important;
+}
+
+/*.clickedButton {
+	display: block;
+	float: right;
+}*/
+
+/*homepage neighborhood thumbnails*/
 #neighborhoodZones {
 	background-color: #E46A73;
 	font-family: 'Oswald', serif;
@@ -139,13 +145,23 @@ h2{
 	padding-top: 10px;
 }
 
+.imgthumbnail {
+	border-radius: 50%;
+	overflow: hidden;
+	border: solid;
+	border-color: #786E5D
+}
+
+
+/*hompage about us box*/
 #aboutUs {
-	background-color: #A0C4CF;
+	background-color: #C3FCFE;
 	font-family: 'Playfair Display', serif;
 	color: #786E5D;
 	text-align: justify;
 	font-style: 18px;
 	font-size: 16px;
+	padding-top: 20px;
 }
 
 #aboutUs a {
@@ -161,6 +177,7 @@ h2{
 	font-size: 16px;
 }
 
+/*homepage social media icons*/
 .icons {
 	color: #786E5D;
 	padding-right: 50%;
@@ -170,6 +187,7 @@ h2{
  	color: #786E5D;
 }
 
+/*homepage footer*/
 #footerfont {
 	 font-family: 'Playfair Display';
 	 color: #786E5D;
@@ -195,9 +213,48 @@ footer {
 	 padding-top: 1%;
 }
 
-#btnLogin {
-	color: white;
-	background-color: #7B7A7A;
+
+/*.form-control {
+padding-right: 10px;
+}
+
+.form-group {
+	padding-left: 0px;
+}
+
+.bodyStyle{
+	padding-left: 40px;
+	padding-right: 20px;
+}*/
+
+
+/*area restaurants page header*/
+#apiNeighborhood {
+	color: #FEE28D;
+	margin-top: 0px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-size: 
+}
+#apiNeighborhood::first-letter {
+    text-transform: uppercase;
+}
+
+.paginationclass div {
+    cursor: pointer;
+    text-decoration: highlight;
+}
+
+
+/*area restaurants page list*/
+
+.list-group-item {
+	font-family: Oswald;
+	color: #786E5D;
+}
+
+.list-group-item a {
+	color: #786E5D;
 }
 
 .listnoStyle {
@@ -208,52 +265,14 @@ ul {
 	padding-left: 0px;
 }
 
-/*.bodyStyle{
-	padding-left: 40px;
-	padding-right: 20px;
+.list-group-item:hover {
+	background-color: #FEE28D;
+}
+/*.restaurantLi {
+	font-family: 'Playfair Display';
 }*/
 
-.paginationclass div {
-    cursor: pointer;
-    text-decoration: highlight;
-}
-.active {
-    background-color: #A0C4CF;
-    background-color: pink;
-
-}
-
-#apiNeighborhood::first-letter {
-    text-transform: uppercase;
-}
-
-
-#status {
-	font-size: 14px;
-}
-p {
-	padding-left: 10px;
-	padding-right: 10px
-}
-
-input {
-	padding-right: 10px;
-}
-
-.imgthumbnail {
-	border-radius: 50%;
-	overflow: hidden;
-	border: solid;
-	border-color: #786E5D
-}
-
-h2{
-	text-align: center;
-	font-family: Pacifico;
-	font-size: 2em;
-}
-
-
+/*area restaurants page buttons*/
 
 .btn-circle {
   width: 30px;
@@ -263,51 +282,62 @@ h2{
   font-size: 12px;
   line-height: 1.428571429;
   border-radius: 15px;
-  background-color: #A0C4CF;
-  border-color: #A0C4CF;
+  background-color: #786E5D;
+  border-color: #786E5D;
   color: white;
   display: block;
   float: right;
 }
 
 .btn-circle:hover {
-	background-color: #A0C4CF;
-    border-color: #A0C4CF;
+	background-color: #786E5D;
+    border-color: #786E5D;
     color: white;
 }
 
 
 .btn-circle:focus {
 	outline: none !important;
-	background-color: #A0C4CF;
+}
+
+
+/*area restaurants page background*/
+
+.pageBackground {
+	background-color: #BFB5A3;
+	padding-top: 0px;
+}
+
+/*mylist page header*/
+
+.cursivefont {
+	font-family: Pacifico;
+	font-size: 2em;
 	color: #786E5D;
 }
 
 
-.restaurantLi {
-	font-family: 'Playfair Display';
-}
-
-#apiNeighborhood {
-	color: #FEE28D;
-	margin-top: 0px;
-	padding-top: 20px;
-	padding-bottom: 10px;
-}
-
-.pageBackground {
-	background-color: #786E5D;
-	padding-top: 0px;
-}
+/*input {
+	padding-right: 10px;
+}*/
 
 
 .listpageBackground {
-	background-color: #786E5D;
 	padding-top: 0px;
 	height: 100%
 }
 
+
 /*searching things below*/
+
+/*list search*/
+
+.active {
+    background-color: #C3FCFE;
+    background-color: pink;
+
+}
+
 
 .items {
 	border-left: 2px solid white;
@@ -327,6 +357,7 @@ h2{
 	text-align: center;
 }
 
+<<<<<<< HEAD
 /*begin bootstrap scrollable*/
 
 .scrollable-menu {
@@ -383,3 +414,8 @@ h2{
 	border-right: 5px solid #FEE28D;
 	border-left: 5px solid #FEE28D;
 }
+=======
+.rowColor {
+	background-color: #C3FCFE;
+}
+>>>>>>> 963bbf47671a5fe3853581803fa0a5b1b7322240
