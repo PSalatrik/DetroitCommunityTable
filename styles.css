@@ -17,7 +17,7 @@
 h2{
 	text-align: center;
 	font-family: Pacifico;
-	font-size: 2em;
+	font-size: 36px;
 	padding-bottom: 10px
 }
 
@@ -41,24 +41,27 @@ p {
     margin-top: 0;
     margin-bottom: 0;
     background-color: #C3FCFE;
+    color: #786E5D
  }
 
  .dropdown-menu {
  	background-color: #C3FCFE;
+ 	color: #786E5D;
  }
 
  .navbar .navbar-nav{
  	font-family: 'Oswald';
- 	font-size: 14px;
+ 	font-size: 24px;
  	display: inline-block;
  	float: none;
+ 	color: #786E5D;
  }
 
  .navbar .navbar-collapse {
  	text-align: center;
     position: absolute;
-    padding-left: 35%;
-    text-align: center;
+    padding-left: 32%;
+    color: #786E5D;
  }
 
  .navbar-default {
@@ -66,10 +69,12 @@ p {
 	opacity: 60%;
 	border: none;
 	margin-bottom: 0px;
+	color: #786E5D;
 }
 
 .navbar-default .navbar-nav li a {
-	font-size: 14px;
+	font-size: 18px;
+	color: #786E5D;
 }
 
 .navbar-default .navbar-nav li a:hover {
@@ -85,6 +90,7 @@ p {
 /*facebook status*/
 
 #status {
+	color: #786E5D;
 	font-size: 14px;
 }
 
@@ -109,10 +115,11 @@ p {
   filter: alpha(opacity=60); /* For IE8 and earlier */
   padding-top: 30px;
   padding-bottom: 30px;
+  font-size: 48px
 }
 
 #imageHead img {
-	width:100%;
+	min-width:100%;
 }
 
 /*popup modal*/
@@ -147,7 +154,7 @@ p {
 	font-family: 'Oswald', serif;
 	color: #FEE28D;
 	text-align: center;
-	font-size: 14px;
+	font-size: 36px;
 	padding-bottom: 19px;
 	padding-top: 10px;
 }
@@ -167,8 +174,8 @@ p {
 	color: #786E5D;
 	text-align: justify;
 	font-style: 18px;
-	font-size: 16px;
-	padding-top: 20px;
+	font-size: 18px;
+	padding-top: 5px;
 }
 
 #aboutUs a {
@@ -181,7 +188,7 @@ p {
 
 .highlightText {
 	font-family: 'Oswald';
-	font-size: 16px;
+	font-size: 18px;
 }
 
 /*homepage social media icons*/
@@ -319,7 +326,7 @@ ul {
 
 .cursivefont {
 	font-family: Pacifico;
-	font-size: 2em;
+	font-size: 36px;
 	color: #786E5D;
 }
 
