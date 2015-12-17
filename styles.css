@@ -96,11 +96,12 @@ p {
 /*homepage image and header*/
  #imageHead {
  	font-family: 'Pacifico', cursive;
- 	width:100%;
+ 	min-width: 100%;
  	background: url(img/beirgarten.jpg) no-repeat center center fixed;
 	color: #786E5D;
  	padding: 100px 0 100px;
  	text-align: center;
+ 	background-size: 100% 100%;
 }
 
 #transbox {
@@ -111,9 +112,6 @@ p {
   padding-bottom: 30px;
 }
 
-#imageHead img {
-	width:100%;
-}
 
 /*popup modal*/
 
@@ -430,5 +428,11 @@ ul {
 
 .rowColor {
 	background-color: #C3FCFE;
+}
+
+@media(min-width: @screen-lg-min){
+	#imageHead{
+		margin-top: 0px;
+	}
 }
 
