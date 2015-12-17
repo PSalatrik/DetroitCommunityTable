@@ -45,11 +45,9 @@ app.filter('tel', function () {
     };
 });
 
-$(document).ready(function(){
+/*$(document).ready(function(){
 
   $("button").click(function(){
       $(this).toggleClass("disabled");
 
-    });
-
-});
+    });*/
