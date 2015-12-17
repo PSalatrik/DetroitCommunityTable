@@ -5,10 +5,8 @@
                 <h2 class= "cursivefont"> Search for a Restaurant </h2>
                 <div class='col-md-12'>
                     <div class="form-group">
-                        <typedir arr="arr" items="vm.items" prompt="Find a restaurant!" title="name" star="rating" subtitle="phone" model="vm.name" on-select="vm.selectItem"></typedir>
-                        <!-- <div ng-repeat="eatery in arr">
-                            {{eatery}}
-                        </div> -->
+                        <typedir items="vm.items" prompt="Find a restaurant!" title="name" star="rating" subtitle="phone" model="vm.name" on-select="vm.selectItem"></typedir>
+                        
                     </div>
                 </div>
             </div>
@@ -24,8 +22,6 @@
                         </li>
                     </ul>
 
-                    <!-- <h2> Sort My Restaurant List </h2>
-                    <input type='text' ng-model='vm.sort_by' placeholder="Restaurant Name"> -->
             </div>
         </div>
     </form>

@@ -307,6 +307,7 @@ h2{
 	height: 100%
 }
 
+/*searching things below*/
 
 .items {
 	border-left: 2px solid white;
@@ -326,5 +327,59 @@ h2{
 	text-align: center;
 }
 
+/*begin bootstrap scrollable*/
 
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
 
+.grouper {
+	width: 40%;
+}
+
+#menuBtn {
+	border: 5px solid #A0C4CF;
+	border-radius: 0;
+}
+
+.dropItems {
+	color: white;
+	font-size: 1.2em;
+	margin-left: 10px;
+}
+
+.hoveration {
+	font-family: 'Playfair Display';
+	font-weight: bold;
+	text-align: center;
+	margin: 5px 5px;
+}
+
+.hoveration:hover {
+	background-color: #FEE28D;
+}
+
+.dropper {
+	border: 5px solid #FEE28D;
+	border-radius: 0px;
+	font-family: 'Playfair Display';
+	text-align: center;
+}
+
+.dropper:hover {
+	background-color: white;
+	border: 5px solid #FEE28D;
+}
+
+.dropper:active {
+	background-color: white;
+	border: 5px solid #FEE28D;
+}
+
+.drpDwn {
+	border-bottom: 5px solid #FEE28D;
+	border-right: 5px solid #FEE28D;
+	border-left: 5px solid #FEE28D;
+}
