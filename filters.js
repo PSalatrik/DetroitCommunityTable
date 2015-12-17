@@ -51,5 +51,3 @@ app.filter('tel', function () {
       $(this).toggleClass("disabled");
 
     });*/
-
-});

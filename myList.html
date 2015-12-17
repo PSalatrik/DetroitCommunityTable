@@ -18,7 +18,7 @@
                     <h2 class= "cursivefont">My Restaurant List</h2>
                     <ul class="listnoStyle">
                         <li class = "list-group-item" ng-repeat="place in vm.saved_restaurants">
-                           <p> {{place.name}} </p>
+                           <p>{{place.name}} </p>
                            <p>Rating: {{place.rating}} stars</p>
                            <p ng-show="place.phone">Phone: {{place.phone | tel}}</p>
                         </li>
