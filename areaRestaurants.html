@@ -8,9 +8,9 @@
                 <ul class="listnoStyle">
                     <li class="list-group-item paginationclass" ng-repeat='restaurant in vm.restaurants track by $index | orderBy: "name"' ng-click='vm.select(restaurant)' ng-class='{active: vm.isActive(restaurant)}'>
                             <button type="button" class="btn btn-default btn-circle clickedButton" ng-class="{'active': restaurant.active}" ng-click="activeButton($index)"><i class="glyphicon glyphicon-ok"></i></button>
-                            <p><a ng-href="{{restaurant.url}}"> {{restaurant.name}}</a><p>
+                            <p class="restaurantLi"><a ng-href="{{restaurant.url}}"> {{restaurant.name}}</a><p>
                             <p class="restaurantLi"> Rating: {{restaurant.rating}}</p>
-                            <p class="restaurantLi"> Address: {{restaurant.location.address[0]}}</p>
+                            <p class="restaurantLi" ng-show="restaurant.location.address[0]"> Address: {{restaurant.location.address[0]}}</p>
                             <p class="restaurantLi" ng-show="restaurant.phone"> Phone: {{restaurant.phone | tel}}</p>
                     </li>
                 </ul>
