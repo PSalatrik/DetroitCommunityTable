@@ -25,7 +25,15 @@ p {
 	padding-left: 10px;
 	padding-right: 10px
 }
+#status{
+    color:rgb(120,110,93);
+    position: static;
+    font-family: Oswald;
+    float: right;
+    padding-right: 3%;
+    padding-top: 1%;
 
+}
 
 /*homepage navigation*/
  .dropdown:hover .dropdown-menu {
@@ -48,9 +56,9 @@ p {
 
  .navbar .navbar-collapse {
  	text-align: center;
- 	padding-left: 0px;
- 	padding-right: 0px;
- 	overflow:;
+    position: absolute;
+    padding-left: 35%;
+    text-align: center;
  }
 
  .navbar-default {
