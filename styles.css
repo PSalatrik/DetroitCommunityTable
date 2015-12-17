@@ -346,12 +346,13 @@ ul {
 
 
 .items {
+	width: 300px;
 	text-align: center;
 	border-left: 2px solid white;
 	border-right: 2px solid white;
 	border-bottom: 2px solid white;
 	color: black;
-	position: fixed;
+	position: absolute;
 	z-index: 20;
 	background-color: #FEE28D;
 	font-family: 'Playfair Display';
@@ -400,7 +401,7 @@ ul {
 }
 
 .hoveration:hover {
-	background-color: #FEE28D;
+	background-color: #BFB5A3;
 }
 
 .dropper {
@@ -424,6 +425,7 @@ ul {
 	border-bottom: 5px solid #FEE28D;
 	border-right: 5px solid #FEE28D;
 	border-left: 5px solid #FEE28D;
+	background-color: #FEE28D;
 }
 
 .rowColor {
